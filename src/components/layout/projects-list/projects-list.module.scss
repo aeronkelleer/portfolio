@@ -9,7 +9,7 @@
   margin-bottom: desk(40px, 32px);
   justify-items: center;
 
-  @include DESKTOP {
+  @include MEDIA($DESK_WIDTH) {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -18,7 +18,7 @@
     margin-bottom: desk(60px, 32px);
   }
 
-  @include MIDDLE {
+  @include MEDIA($MID_WIDTH) {
     &:not(._detailed) {
       display: flex;
       width: 100vw;

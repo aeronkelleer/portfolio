@@ -8,7 +8,7 @@
   height: 100%;
 
   &._open {
-    @include MIDDLE {
+    @include MEDIA($MID_WIDTH) {
       z-index: 2;
       transform: translate(0%, 0);
     }
@@ -21,7 +21,7 @@
   justify-content: space-between;
   max-width: desk(600px, 270px);
 
-  @include MIDDLE {
+  @include MEDIA($MID_WIDTH) {
     flex: 0 1 auto;
     flex-direction: column;
     height: 300px;
@@ -35,7 +35,7 @@
   font-weight: 700;
   transition: all .3s;
 
-  @include MIDDLE {
+  @include MEDIA($MID_WIDTH) {
     font-size: mid(32px, 24px);
   }
 

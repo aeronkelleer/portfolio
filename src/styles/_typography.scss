@@ -8,14 +8,14 @@
   font-weight: 900;
   text-align: center;
 
-  @include TABLET {
+  @include MEDIA($TAB_WIDTH) {
     font-size: tab(50px, 30px);
   }
 
   &._main {
     font-size: desk(72px, 60px);
 
-    @include TABLET {
+    @include MEDIA($TAB_WIDTH) {
       font-size: tab(60px, 40px);
     }
   }
@@ -23,7 +23,7 @@
   &._small {
     font-size: desk(40px, 32px);
 
-    @include TABLET {
+    @include MEDIA($TAB_WIDTH) {
       font-size: tab(32px, 24px);
     }
   }

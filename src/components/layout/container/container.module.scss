@@ -9,7 +9,7 @@
   margin-inline: auto;
   padding-inline: desk(40px, 32px);
 
-  @include TABLET {
+  @include MEDIA($TAB_WIDTH) {
     padding-inline: tab(32px, 16px);
   }
 }

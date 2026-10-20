@@ -12,7 +12,7 @@
   margin-bottom: desk(30px);
   text-align: center;
 
-  @include TABLET {
+  @include MEDIA($TAB_WIDTH) {
     margin-bottom: tab(50px, 20px);
   }
 }
@@ -30,7 +30,7 @@
   flex-wrap: wrap;
   gap: desk(20px);
 
-  @include TABLET {
+  @include MEDIA($TAB_WIDTH) {
     flex-direction: column;
     align-items: center;
   }
@@ -64,7 +64,7 @@
 .link_icon {
   @include square(desk(24px));
 
-  @include TABLET {
+  @include MEDIA($TAB_WIDTH) {
     @include square(tab(24px, 20px));
   }
 

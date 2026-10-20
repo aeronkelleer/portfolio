@@ -2,6 +2,7 @@
 
 $WIDESCREEN: calc(16 / 9);
 $tabAsp: calc(834 / 1194);
+$DYN_DECIMALS: 3 !default;
 
 $FULLHD_WIDTH: 1920px;
 $DESK_WIDTH: 1440px;
@@ -16,3 +17,5 @@ $mobRatio: calc($MID_WIDTH / $MOB_WIDTH);
 $FULLHD_HEIGHT: calc($FULLHD_WIDTH / $WIDESCREEN);
 $DESK_HEIGHT: calc($DESK_WIDTH / $WIDESCREEN);
 $TAB_HEIGHT: calc($TAB_WIDTH / $tabAsp);
+
+$ADAPT_WIDTH: null !default;

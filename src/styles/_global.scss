@@ -45,7 +45,7 @@ body {
 section {
   padding-block: desk(70px, 60px);
 
-  @include TABLET {
+  @include MEDIA($TAB_WIDTH) {
     padding-block: tab(50px, 40px);
   }
 }

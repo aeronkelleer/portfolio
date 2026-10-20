@@ -6,7 +6,7 @@
   flex: 1 1 auto;
   max-width: desk(350px, 140px);
 
-  @include MIDDLE {
+  @include MEDIA($MID_WIDTH) {
     display: none;
   }
 }

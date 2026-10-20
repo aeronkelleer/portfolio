@@ -14,11 +14,11 @@
   justify-content: space-evenly;
   gap: desk(50px, 25px);
 
-  @include TABLET {
+  @include MEDIA($TAB_WIDTH) {
     gap: tab(25px, 20spx);
   }
 
-  @include MIDDLE {
+  @include MEDIA($MID_WIDTH) {
     flex-direction: column;
   }
 }
@@ -28,11 +28,11 @@
   flex-direction: column;
   gap: desk(32px);
 
-  @include TABLET {
+  @include MEDIA($TAB_WIDTH) {
     gap: tab(32px, 18px);
   }
 
-  @include MIDDLE {
+  @include MEDIA($MID_WIDTH) {
     display: flex;
     flex-direction: column;
   }
@@ -44,7 +44,7 @@
   text-align: left;
   text-wrap: balance;
 
-  @include TABLET {
+  @include MEDIA($TAB_WIDTH) {
     margin-bottom: tab(20px, 12px);
     font-size: tab(30px, 24px);
   }
@@ -66,7 +66,7 @@
   font-size: desk(20px, 18px);
   text-align: justify;
 
-  @include TABLET {
+  @include MEDIA($TAB_WIDTH) {
     font-size: tab(20px, 14px);
   }
 }

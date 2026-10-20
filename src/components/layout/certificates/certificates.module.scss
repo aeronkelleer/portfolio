@@ -8,7 +8,7 @@
   margin-bottom: desk(32px, 28px);
   text-align: left;
 
-  @include TABLET {
+  @include MEDIA($TAB_WIDTH) {
     margin-bottom: tab(28px, 20px);
   }
 }
@@ -17,17 +17,17 @@
   display: flex;
   gap: desk(40px, 32px);
 
-  @include TABLET {
+  @include MEDIA($TAB_WIDTH) {
     flex-direction: column;
   }
 }
 
 .item {
-  @include TABLET {
+  @include MEDIA($TAB_WIDTH) {
     width: 400px;
   }
 
-  @include MIDDLE {
+  @include MEDIA($MID_WIDTH) {
     width: 100%;
   }
 

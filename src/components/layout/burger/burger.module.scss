@@ -13,7 +13,7 @@
   display: none;
   gap: desk(6px);
 
-  @include MIDDLE {
+  @include MEDIA($MID_WIDTH) {
     display: flex;
   }
 }

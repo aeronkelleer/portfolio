@@ -6,7 +6,7 @@
   cursor: pointer;
   padding-inline: desk(6px);
 
-  @include MIDDLE {
+  @include MEDIA($MID_WIDTH) {
     width: auto;
     margin: 0 auto;
   }
@@ -31,7 +31,7 @@
   border-radius: 50%;
   @include square(desk(28px, 20px));
 
-  @include MIDDLE {
+  @include MEDIA($MID_WIDTH) {
     @include square(mid(40px, 32px));
   }
 
@@ -45,7 +45,7 @@
   color: var(--secondary);
   font-size: desk(14px);
 
-  @include MIDDLE {
+  @include MEDIA($MID_WIDTH) {
     font-size: mid(28px, 22px);
   }
 }
@@ -62,7 +62,7 @@
   background-image: linear-gradient(to bottom, transparent 0%, var(--bg) 30%);
   padding-inline: desk(6px);
 
-  @include MIDDLE {
+  @include MEDIA($MID_WIDTH) {
     margin-inline: auto;
     background: transparent;
   }
@@ -82,7 +82,7 @@
   transition: all 250ms;
   font-size: desk(14px);
 
-  @include MIDDLE {
+  @include MEDIA($MID_WIDTH) {
     font-size: mid(28px, 22px);
   }
 }

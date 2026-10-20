@@ -9,7 +9,7 @@
     display: grid;
     grid-template-columns: auto 1fr;
 
-    @include TABLET {
+    @include MEDIA($TAB_WIDTH) {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -19,7 +19,7 @@
     .inner {
       width: desk(320px, 320px);
 
-      @include MIDDLE {
+      @include MEDIA($MID_WIDTH) {
         width: 100%;
       }
     }
@@ -31,7 +31,7 @@
     .name {
       font-size: desk(18px, 16px);
 
-      @include TABLET {
+      @include MEDIA($TAB_WIDTH) {
         font-size: tab(18px, 14px);
       }
     }
@@ -52,7 +52,7 @@
   backdrop-filter: blur(max(0.417vw, 6px));
   transition: all 250ms;
 
-  @include TABLET {
+  @include MEDIA($TAB_WIDTH) {
     padding-inline: tab(12px, 10px);
   }
 }
@@ -73,7 +73,7 @@
 .name {
   font-size: desk(16px, 14px);
 
-  @include TABLET {
+  @include MEDIA($TAB_WIDTH) {
     font-size: tab(16px, 14px);
   }
 }

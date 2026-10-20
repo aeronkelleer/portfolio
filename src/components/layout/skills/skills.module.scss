@@ -28,7 +28,7 @@
   margin-bottom: desk(32px, 28px);
   text-align: left;
 
-  @include TABLET {
+  @include MEDIA($TAB_WIDTH) {
     margin-bottom: tab(28px, 20px);
   }
 }
@@ -40,7 +40,7 @@
   gap: desk(40px, 32px);
   padding-inline: 0;
 
-  @include TABLET {
+  @include MEDIA($TAB_WIDTH) {
     gap: tab(32px, 20px);
   }
 }
@@ -52,7 +52,7 @@
   gap: desk(18px, 16px);
   flex-wrap: wrap;
 
-  @include TABLET {
+  @include MEDIA($TAB_WIDTH) {
     gap: tab(16px, 12px);
   }
 }
@@ -63,7 +63,7 @@
   letter-spacing: .1dvh;
   font-size: desk(20px, 18px);
 
-  @include TABLET {
+  @include MEDIA($TAB_WIDTH) {
     font-size: tab(18px, 16px);
   }
 }
@@ -73,7 +73,7 @@
   flex-wrap: wrap;
   gap: desk(20px, 16px);
 
-  @include TABLET {
+  @include MEDIA($TAB_WIDTH) {
     gap: tab(16px, 12px);
   }
 }

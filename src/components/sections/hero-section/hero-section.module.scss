@@ -24,7 +24,7 @@
   gap: desk(20px);
   width: 90vw;
 
-  @include MIDDLE {
+  @include MEDIA($MID_WIDTH) {
     flex-direction: column;
     justify-content: center;
     gap: mid(60px, 50px);
@@ -37,11 +37,11 @@
   width: 100%;
   max-width: desk(670px, 470px);
 
-  @include TABLET {
+  @include MEDIA($TAB_WIDTH) {
     max-width: tab(470px, 170px);
   }
 
-  @include MIDDLE {
+  @include MEDIA($MID_WIDTH) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -54,7 +54,7 @@
   margin-bottom: desk(10px);
   text-align: left;
 
-  @include MIDDLE {
+  @include MEDIA($MID_WIDTH) {
     align-self: center;
   }
 }
@@ -64,7 +64,7 @@
   font-size: desk(36px, 25px);
   scale: 1 1.2;
 
-  @include TABLET {
+  @include MEDIA($TAB_WIDTH) {
     margin-bottom: tab(50px, 20px);
     font-size: tab(25px, 16px);
   }
@@ -78,7 +78,7 @@
 .button {
   align-self: flex-start;
 
-  @include TABLET {
+  @include MEDIA($TAB_WIDTH) {
     p {
       font-size: tab(18px, 14px) !important;
     }
@@ -90,7 +90,7 @@
   height: auto;
   position: relative;
 
-  @include MIDDLE {
+  @include MEDIA($MID_WIDTH) {
     width: mid(340px, 270px);
   }
 }
@@ -113,7 +113,7 @@
     top: desk(130px, 130px);
     animation: floating 2s ease-in-out infinite alternate;
 
-    @include MIDDLE {
+    @include MEDIA($MID_WIDTH) {
       left: mid(80px, 50px);
       top: mid(80px, 80px);
     }
@@ -125,7 +125,7 @@
     bottom: desk(200px, 70px);
     animation: floating 1s ease-in-out infinite alternate;
 
-    @include MIDDLE {
+    @include MEDIA($MID_WIDTH) {
       left: auto;
       right: mid(100px, 70px);
       bottom: mid(50px, 50px);

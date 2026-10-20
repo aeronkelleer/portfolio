@@ -21,13 +21,13 @@
   gap: desk(40px, 20px);
   margin-bottom: desk(40px, 20px);
 
-  @include MIDDLE {
+  @include MEDIA($MID_WIDTH) {
     grid-template-columns: auto;
   }
 }
 
 .image_wrapper {
-  @include MIDDLE {
+  @include MEDIA($MID_WIDTH) {
     width: 100%;
     height: tab(400px, 200px);
   }
@@ -37,7 +37,7 @@
     height: 100%;
     object-fit: cover;
 
-    @include MIDDLE {
+    @include MEDIA($MID_WIDTH) {
       // object-position: 0 10%;
       object-position: top;
     }

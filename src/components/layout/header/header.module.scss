@@ -10,11 +10,11 @@
   z-index: 10;
   translate: -50%;
 
-  @include TABLET {
+  @include MEDIA($TAB_WIDTH) {
     top: tab(18px, 10px);
   }
 
-  @include MIDDLE {
+  @include MEDIA($MID_WIDTH) {
     top: 8px;
   }
 }
@@ -30,7 +30,7 @@
   padding-inline: desk(16px);
   padding-block: desk(10px);
 
-  @include MIDDLE {
+  @include MEDIA($MID_WIDTH) {
     justify-content: flex-end;
     padding-block: mid(10px, 6px);
   }
@@ -39,7 +39,7 @@
 .burger {
   display: none;
 
-  @include MIDDLE {
+  @include MEDIA($MID_WIDTH) {
     display: flex;
   }
 }

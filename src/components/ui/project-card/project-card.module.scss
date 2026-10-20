@@ -12,7 +12,7 @@
   backdrop-filter: blur(desk(2px));
   transition: all 250ms;
 
-  @include MIDDLE {
+  @include MEDIA($MID_WIDTH) {
     flex-shrink: 0;
     width: 100vw;
     padding-inline: 20px;
@@ -33,7 +33,7 @@
     background-color: #ffffff09;
     backdrop-filter: blur(desk(2px));
 
-    @include MIDDLE {
+    @include MEDIA($MID_WIDTH) {
       padding: 0;
     }
 
@@ -42,7 +42,7 @@
       grid-template-columns: 2fr 3fr;
       gap: desk(30px, 16px);
 
-      @include MIDDLE {
+      @include MEDIA($MID_WIDTH) {
         grid-template-columns: auto;
         border: none;
         background-color: transparent;
@@ -58,7 +58,7 @@
     .description {
       font-size: desk(18px, 16px);
 
-      @include TABLET {
+      @include MEDIA($TAB_WIDTH) {
         font-size: tab(16px, 14px);
       }
     }
@@ -72,7 +72,7 @@
   height: 100%;
   color: inherit;
 
-  @include MIDDLE {
+  @include MEDIA($MID_WIDTH) {
     justify-content: space-between;
     gap: 10px;
     width: auto;
@@ -94,11 +94,11 @@
   overflow: clip;
   min-height: desk(360px, 200px);
 
-  @include TABLET {
+  @include MEDIA($TAB_WIDTH) {
     min-height: tab(200px, 0);
   }
 
-  @include MIDDLE {
+  @include MEDIA($MID_WIDTH) {
     flex: 1 1 auto;
     display: flex;
     justify-content: center;
@@ -120,7 +120,7 @@
   transition: all .3s;
   object-position: top;
 
-  @include MIDDLE {
+  @include MEDIA($MID_WIDTH) {
     object-fit: contain;
   }
 }
@@ -137,7 +137,7 @@
   font-size: desk(24px, 20px);
   font-weight: 700;
 
-  @include TABLET {
+  @include MEDIA($TAB_WIDTH) {
     font-size: tab(20px, 18px);
   }
 }
@@ -147,7 +147,7 @@
   flex-direction: column;
   gap: desk(8px, 6px);
 
-  @include TABLET {
+  @include MEDIA($TAB_WIDTH) {
     gap: tab(6px, 4px);
   }
 }
@@ -155,7 +155,7 @@
 .description {
   font-size: desk(16px, 14px);
 
-  @include TABLET {
+  @include MEDIA($TAB_WIDTH) {
     font-size: tab(14px, 12px);
   }
 }

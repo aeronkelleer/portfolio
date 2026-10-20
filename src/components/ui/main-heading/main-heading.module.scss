@@ -7,7 +7,7 @@
   text-align: center;
   font-size: desk(72px, 50px);
 
-  @include TABLET {
+  @include MEDIA($TAB_WIDTH) {
     font-size: tab(50px, 32px);
   }
 }

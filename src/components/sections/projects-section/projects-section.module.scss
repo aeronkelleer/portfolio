@@ -10,7 +10,7 @@
     'heading button'
     'projects projects';
 
-  @include MIDDLE {
+  @include MEDIA($MID_WIDTH) {
     grid-template-areas:
       'heading'
       'projects'
@@ -32,7 +32,7 @@
   grid-area: projects;
   margin-top: desk(60px, 40px);
 
-  @include TABLET {
+  @include MEDIA($TAB_WIDTH) {
     margin-top: tab(40px, 20px);
   }
 }
@@ -42,7 +42,7 @@
   grid-area: button;
   justify-self: end;
 
-  @include MIDDLE {
+  @include MEDIA($MID_WIDTH) {
     justify-self: start;
   }
 }
