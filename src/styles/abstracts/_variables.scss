@@ -1,6 +1,5 @@
 // %======================== variables ========================% //
 
-// %------------ viewport ------------% //
 $WIDESCREEN: calc(16 / 9);
 $tabAsp: calc(834 / 1194);
 
@@ -17,17 +16,3 @@ $mobRatio: calc($MID_WIDTH / $MOB_WIDTH);
 $FULLHD_HEIGHT: calc($FULLHD_WIDTH / $WIDESCREEN);
 $DESK_HEIGHT: calc($DESK_WIDTH / $WIDESCREEN);
 $TAB_HEIGHT: calc($TAB_WIDTH / $tabAsp);
-
-// %------------ colors ------------% //
-
-$white: #fff;
-$orange: #fca350;
-$gray: #192025;
-$lightGray: #ececec;
-$middleGray: #6b6b6b;
-$grayTransparent: #0e161d67;
-$blue: #1e6372;
-$mainGradient: linear-gradient(#1e3040, #000000);
-$boxShadow: 0 0 5px 0 #ffffff6e;
-$boxShadowExpanded: 0 0 10px 4px #e5e5e544;
-$blueGradient: linear-gradient(to left, #1e6372, #2f96b0);

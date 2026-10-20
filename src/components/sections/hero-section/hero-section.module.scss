@@ -70,10 +70,19 @@
   }
 }
 
-.button_box {}
+.button_box {
+  display: flex;
+  gap: desk(18px);
+}
 
 .button {
   align-self: flex-start;
+
+  @include TABLET {
+    p {
+      font-size: tab(18px, 14px) !important;
+    }
+  }
 }
 
 .image_box {

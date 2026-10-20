@@ -11,7 +11,6 @@
   position: relative;
   border-radius: desk(16px);
   box-shadow: inset 0 0 desk(5px) desk(1px) #ffffff6e;
-  background-image: var(--orangeGradient);
   color: var(--white);
   font-size: desk(20px);
   transition: all 250ms;
@@ -36,6 +35,14 @@
     border-radius: inherit;
     box-shadow: 0 0 desk(20px) desk(2px) var(--secondary50);
     transition: opacity 250ms;
+  }
+
+  &._orange {
+    background-image: var(--orangeGradient);
+  }
+
+  &._gray {
+    background-image: var(--grayGradient);
   }
 }
 

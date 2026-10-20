@@ -10,14 +10,15 @@ type MainButtonProps = {
   href: string;
   text: string;
   iconPath: string;
+  color?: 'orange' | 'gray';
   onMainButtonClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 };
 
 function MainButton(mainButtonProps: MainButtonProps): React.JSX.Element {
-  const { className, href, text, iconPath, onMainButtonClick } = mainButtonProps;
+  const { className, href, text, iconPath, color = 'orange', onMainButtonClick } = mainButtonProps;
   return (
     <Link
-      className={clsx(className, s.main_button)}
+      className={clsx(className, s.main_button, s[`_${color}`])}
       href={href}
       onClick={onMainButtonClick}
     >

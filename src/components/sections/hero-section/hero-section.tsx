@@ -5,7 +5,7 @@ import Picture from '@/components/shared/picture/picture';
 import Background from '@/components/ui/background/background';
 import MainButton from '@/components/ui/main-button/main-button';
 import MainHeading from '@/components/ui/main-heading/main-heading';
-import { basePath, Ext } from '@/constants/const';
+import { AppRoute, basePath, Ext } from '@/constants/const';
 import { useMouseMove } from '@/hooks/use-mouse-move';
 import { gsap, useGSAP } from '@/lib/gsap';
 import clsx from 'clsx';
@@ -15,28 +15,26 @@ import s from './hero-section.module.scss';
 // @======================== HeroSection ========================@ //
 
 function HeroSection(): React.JSX.Element {
-
   const refs = {
     section: useRef<HTMLDivElement | null>(null),
     heading: useRef<HTMLHeadingElement | null>(null),
     text: useRef<HTMLDivElement | null>(null),
-    button: useRef<HTMLDivElement | null>(null),
+    button_projects: useRef<HTMLDivElement | null>(null),
+    button_cv: useRef<HTMLDivElement | null>(null),
     image: useRef<HTMLDivElement | null>(null),
-    circles: [
-      useRef<HTMLDivElement | null>(null),
-      useRef<HTMLDivElement | null>(null),
-    ]
+    circles: [useRef<HTMLDivElement | null>(null), useRef<HTMLDivElement | null>(null)],
   };
 
   useGSAP(() => {
-    gsap.timeline({
-      defaults: {
-        duration: 0.3,
-        ease: 'power2.out'
-      }
-    })
+    gsap
+      .timeline({
+        defaults: {
+          duration: 0.3,
+          ease: 'power2.out',
+        },
+      })
       .to(refs.section.current, {
-        autoAlpha: 1
+        autoAlpha: 1,
       })
       .from(refs.heading.current, {
         xPercent: -25,
@@ -46,7 +44,7 @@ function HeroSection(): React.JSX.Element {
         xPercent: -25,
         opacity: 0,
       })
-      .from(refs.button.current, {
+      .from(refs.button_cv.current, {
         xPercent: -25,
         opacity: 0,
       })
@@ -83,15 +81,30 @@ function HeroSection(): React.JSX.Element {
       <Container>
         <div className={s.inner}>
           <div className={s.info}>
-            <MainHeading className={s.heading} ref={refs.heading}>Hi! I&apos;m Alex</MainHeading>
-            <p className={s.text} ref={refs.text}>a frontend developer</p>
-            <div className={s.button_box} ref={refs.button}>
-              <MainButton
-                className={s.button}
-                href=''
-                text='Download CV'
-                iconPath={`${basePath}/img/icons/download-arrow.svg`}
-              />
+            <MainHeading className={s.heading} ref={refs.heading}>
+              Hi! I&apos;m Alex
+            </MainHeading>
+            <p className={s.text} ref={refs.text}>
+              a frontend developer
+            </p>
+            <div className={s.button_box}>
+              <div className={s.button_wrapper} ref={refs.button_projects}>
+                <MainButton
+                  className={s.button}
+                  href={AppRoute.PROJECTS}
+                  text='View Projects'
+                  iconPath={`${basePath}/img/icons/go-to-arrow.svg`}
+                  color='gray'
+                />
+              </div>
+              <div className={s.button_wrapper} ref={refs.button_cv}>
+                <MainButton
+                  className={s.button}
+                  href=''
+                  text='Download CV'
+                  iconPath={`${basePath}/img/icons/download-arrow.svg`}
+                />
+              </div>
             </div>
           </div>
           <div className={s.image_box} ref={refs.image}>

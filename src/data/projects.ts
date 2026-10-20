@@ -10,8 +10,6 @@ export const PROJECTS: ProjectType[] = [
     fullDesc: 'A multi-page corporate website built with Next.js and TypeScript using server-side rendering. The project includes service pages, case studies, articles, vacancies, and team sections.\nDynamic content is loaded from both external and internal APIs, including job listings from hh.ru and articles managed via a backend admin panel. Article content is received as structured JSON and rendered on a single dynamic page. Contact forms and scroll-based UI animations are implemented using GSAP.\nThe website is deployed on a server using PM2 and is running in production.',
     technologies: ['Next.js', 'SCSS', 'TypeScript', 'SSR', 'GSAP'],
     imgSrc: `${basePath}/img/projects/advline.png`,
-    // gifSrc: `${basePath}/img/projects/advline.gif`,
-    // gifMobSrc: `${basePath}/img/projects/advline-mob.gif`,
   },
   {
     href: 'https://paradocs.ru/',
@@ -21,8 +19,6 @@ export const PROJECTS: ProjectType[] = [
     fullDesc: 'A content-focused multi-page website built with Next.js and TypeScript, fully managed through a backend admin panel. All textual content is dynamically loaded, allowing editors to update pages without frontend changes.\nThe project uses server-side rendering for performance and SEO. It includes contact forms, light and dark theme switching implemented with CSS variables, and scroll-based animations using GSAP.\nThe website is running in production.',
     technologies: ['Next.js', 'TypeScript', 'SCSS', 'SSR', 'GSAP'],
     imgSrc: `${basePath}/img/projects/paradocs.png`,
-    // gifSrc: `${basePath}/img/projects/paradocs.gif`,
-    // gifMobSrc: `${basePath}/img/projects/paradocs-mob.gif`,
   },
   {
     href: 'https://dev.msmedias.ru/weba-ecosystem/out/',
@@ -32,8 +28,6 @@ export const PROJECTS: ProjectType[] = [
     fullDesc: 'An interactive multi-page brand presentation built with Next.js, designed to showcase the visual identity of the Weba ecosystem and its services.\nThe main page features a particle-based 3D logo with user interaction, implemented using Three.js and WebGL. Internal pages follow a consistent structure and interaction pattern.\nThe project was created as a presentation and demonstration website.',
     technologies: ['Next.js', 'TypeScript', 'SCSS', 'Three.js', 'WebGL'],
     imgSrc: `${basePath}/img/projects/weba-ecosystem.png`,
-    // gifSrc: `${basePath}/img/projects/weba-ecosystem.gif`,
-    // gifMobSrc: `${basePath}/img/projects/weba-ecosystem-mob.gif`,
   },
   {
     href: 'https://my.weba.net/',
@@ -43,7 +37,5 @@ export const PROJECTS: ProjectType[] = [
     fullDesc: 'A production single-page application built with React, TypeScript, and Vite for an internet service provider’s customers.\nThe dashboard includes user authentication, account data display, and feedback forms. The frontend is fully integrated with an external API provided by the backend team.\nThe application is actively used by real customers.',
     technologies: ['React', 'SCSS', 'TypeScript', 'Vite', 'Redux'],
     imgSrc: `${basePath}/img/projects/weba-account.png`,
-    // gifSrc: `${basePath}/img/projects/weba-account.gif`,
-    // gifMobSrc: `${basePath}/img/projects/weba-account-mob.gif`,
   },
 ];

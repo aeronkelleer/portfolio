@@ -46,14 +46,13 @@
   padding-block: desk(8px, 6px);
   border: desk(1px) solid var(--secondary50);
   border-radius: desk(16px);
-  background-color: $grayTransparent;
+  background-color: var(--gray);
   letter-spacing: 0.8;
   position: relative;
   backdrop-filter: blur(max(0.417vw, 6px));
   transition: all 250ms;
 
   @include TABLET {
-    // height: tab(34px, 32px);
     padding-inline: tab(12px, 10px);
   }
 }
