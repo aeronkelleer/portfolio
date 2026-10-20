@@ -11,7 +11,7 @@ interface AboutHeroProps {
   text: string;
 }
 
-function AboutHero(props: AboutHeroProps): React.JSX.Element {
+export default function AboutHero(props: AboutHeroProps): React.JSX.Element {
   const { text } = props;
 
   return (
@@ -36,4 +36,3 @@ function AboutHero(props: AboutHeroProps): React.JSX.Element {
     </section>
   );
 }
-export default AboutHero;
