@@ -1,6 +1,6 @@
 'use client';
 
-import { AppRoute } from '@/constants/const';
+import { AppRoute, basePath } from '@/constants/const';
 import { splitTextToParagraphs } from '@/utils/utils';
 import clsx from 'clsx';
 import Image from 'next/image';
@@ -22,7 +22,7 @@ type ProjectCardProps = {
   gifMobSrc?: string;
 };
 
-function ProjectCard(projectCardProps: ProjectCardProps): React.JSX.Element {
+export default function ProjectCard(projectCardProps: ProjectCardProps): React.JSX.Element {
   const { className, href, label, title, desc, fullDesc, technologies, imgSrc, gifSrc, gifMobSrc } = projectCardProps;
   // const [isHovered, setIsHovered] = useState(false);
   // const isMobileScreen = useMediaQuery(MediaQuery.MOBILE);
@@ -45,7 +45,7 @@ function ProjectCard(projectCardProps: ProjectCardProps): React.JSX.Element {
           <Image
             className={s.image}
             // src={!isMobileScreen ? (isHovered ? gifSrc : imgSrc) : gifMobSrc}
-            src={imgSrc}
+            src={`${basePath}/${imgSrc}`}
             alt=''
             width={417}
             height={234}
@@ -70,4 +70,3 @@ function ProjectCard(projectCardProps: ProjectCardProps): React.JSX.Element {
     </li>
   );
 }
-export default ProjectCard;

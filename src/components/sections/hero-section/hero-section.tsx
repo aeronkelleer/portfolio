@@ -10,6 +10,7 @@ import { useMouseMove } from '@/hooks/use-mouse-move';
 import { gsap, useGSAP } from '@/lib/gsap';
 import { splitTextToParagraphs } from '@/utils/utils';
 import clsx from 'clsx';
+import Image from 'next/image';
 import { useRef } from 'react';
 import s from './hero-section.module.scss';
 
@@ -85,6 +86,7 @@ export default function HeroSection(props: HeroSectionProps) {
         <div className={clsx(s.circle, s._bottom)} ref={refs.circles[1]}>
           <div className={s.circleInner} />
         </div>
+        <Image src={`${basePath}/img/bg/background.png`} alt='background' fill />
       </Background>
       <Container>
         <div className={s.inner}>
