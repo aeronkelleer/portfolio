@@ -2,7 +2,7 @@
 
 import ProjectCard from '@/components/ui/project-card/project-card';
 import { AppRoute } from '@/constants/const';
-import { WorkType as ProjectType } from '@/types/types';
+import { Project } from '@/types/types';
 import clsx from 'clsx';
 import { usePathname } from 'next/navigation';
 import s from './projects-list.module.scss';
@@ -10,12 +10,11 @@ import s from './projects-list.module.scss';
 // $======================== Projects ========================$ //
 
 type ProjectsProps = {
-  projects: ProjectType[];
+  projects: Project[];
   className: string;
 };
 
 function ProjectsList(projectsProps: ProjectsProps): React.JSX.Element {
-
   const { projects, className } = projectsProps;
 
   const pathname = usePathname();
@@ -24,13 +23,7 @@ function ProjectsList(projectsProps: ProjectsProps): React.JSX.Element {
   return (
     <ul className={clsx(className, s.projects_list, { [s._detailed]: isDetailed })}>
       {projects.map((project) => {
-        return (
-          <ProjectCard
-            className={s.item}
-            key={project.label}
-            {...project}
-          />
-        );
+        return <ProjectCard className={s.item} key={project.label} {...project} />;
       })}
     </ul>
   );
