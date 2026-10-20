@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg id="a" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
-  <rect width="50" height="50" rx="8.9" ry="8.9" fill="#300"/>
-  <polygon points="10.2 35.1 17.8 12.7 23 12.7 30.8 35.1 26 35.1 24.2 29.8 16.5 29.8 14.8 35.1 10.2 35.1" fill="#ff9a00"/>
-  <polygon points="22.9 25.5 17.6 25.5 20.3 16.6 22.9 25.5" fill="#300"/>
-  <rect x="33.1" y="18.4" width="4.6" height="16.8" fill="#ff9a00"/>
-  <circle cx="35.4" cy="13.8" r="2.7" fill="#ff9a00"/>
-</svg>

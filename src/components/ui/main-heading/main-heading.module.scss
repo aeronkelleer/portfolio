@@ -8,6 +8,6 @@
   font-size: desk(72px, 50px);
 
   @include MEDIA($TAB_WIDTH) {
-    font-size: tab(50px, 32px);
+    font-size: adapt(50px, 32px);
   }
 }

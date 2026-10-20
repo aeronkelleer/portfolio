@@ -14,6 +14,10 @@
   background-size: cover;
   background-position: center 100%;
   @include autoAlpha0;
+
+  @include MEDIA($MID_WIDTH) {
+    padding-block: 70px;
+  }
 }
 
 .inner {
@@ -27,7 +31,7 @@
   @include MEDIA($MID_WIDTH) {
     flex-direction: column;
     justify-content: center;
-    gap: mid(60px, 50px);
+    gap: adapt(60px, 50px);
   }
 }
 
@@ -38,7 +42,7 @@
   max-width: desk(670px, 470px);
 
   @include MEDIA($TAB_WIDTH) {
-    max-width: tab(470px, 170px);
+    max-width: adapt(470px, 170px);
   }
 
   @include MEDIA($MID_WIDTH) {
@@ -56,17 +60,23 @@
 
   @include MEDIA($MID_WIDTH) {
     align-self: center;
+    text-align: center;
   }
 }
 
 .text {
   margin-bottom: desk(50px);
-  font-size: desk(36px, 25px);
+  font-size: desk(24px, 24px);
   scale: 1 1.2;
+  text-wrap: balance;
 
   @include MEDIA($TAB_WIDTH) {
-    margin-bottom: tab(50px, 20px);
-    font-size: tab(25px, 16px);
+    margin-bottom: adapt(50px, 20px);
+    font-size: adapt(25px, 16px);
+  }
+
+  @include MEDIA($MID_WIDTH) {
+    text-align: center;
   }
 }
 
@@ -80,7 +90,7 @@
 
   @include MEDIA($TAB_WIDTH) {
     p {
-      font-size: tab(18px, 14px) !important;
+      font-size: adapt(18px, 14px) !important;
     }
   }
 }
@@ -91,7 +101,7 @@
   position: relative;
 
   @include MEDIA($MID_WIDTH) {
-    width: mid(340px, 270px);
+    width: adapt(340px, 270px);
   }
 }
 
@@ -114,8 +124,8 @@
     animation: floating 2s ease-in-out infinite alternate;
 
     @include MEDIA($MID_WIDTH) {
-      left: mid(80px, 50px);
-      top: mid(80px, 80px);
+      left: adapt(80px, 50px);
+      top: adapt(80px, 80px);
     }
   }
 
@@ -127,8 +137,8 @@
 
     @include MEDIA($MID_WIDTH) {
       left: auto;
-      right: mid(100px, 70px);
-      bottom: mid(50px, 50px);
+      right: adapt(100px, 70px);
+      bottom: adapt(50px, 50px);
     }
   }
 }

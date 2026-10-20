@@ -11,7 +11,7 @@
   translate: -50%;
 
   @include MEDIA($TAB_WIDTH) {
-    top: tab(18px, 10px);
+    top: adapt(18px, 10px);
   }
 
   @include MEDIA($MID_WIDTH) {
@@ -32,7 +32,7 @@
 
   @include MEDIA($MID_WIDTH) {
     justify-content: flex-end;
-    padding-block: mid(10px, 6px);
+    padding-block: adapt(10px, 6px);
   }
 }
 

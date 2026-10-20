@@ -8,13 +8,21 @@ import MainHeading from '@/components/ui/main-heading/main-heading';
 import { AppRoute, basePath, Ext } from '@/constants/const';
 import { useMouseMove } from '@/hooks/use-mouse-move';
 import { gsap, useGSAP } from '@/lib/gsap';
+import { splitTextToParagraphs } from '@/utils/utils';
 import clsx from 'clsx';
 import { useRef } from 'react';
 import s from './hero-section.module.scss';
 
 // @======================== HeroSection ========================@ //
 
-function HeroSection(): React.JSX.Element {
+interface HeroSectionProps {
+  heading: string;
+  text: string;
+}
+
+export default function HeroSection(props: HeroSectionProps) {
+  const { heading, text } = props;
+
   const refs = {
     section: useRef<HTMLDivElement | null>(null),
     heading: useRef<HTMLHeadingElement | null>(null),
@@ -82,11 +90,15 @@ function HeroSection(): React.JSX.Element {
         <div className={s.inner}>
           <div className={s.info}>
             <MainHeading className={s.heading} ref={refs.heading}>
-              Hi! I&apos;m Alex
+              {heading}
             </MainHeading>
-            <p className={s.text} ref={refs.text}>
-              a frontend developer
-            </p>
+            <div className={s.text_box} ref={refs.text}>
+              {splitTextToParagraphs(text).map((item, index) => (
+                <p key={index} className={s.text}>
+                  {item}
+                </p>
+              ))}
+            </div>
             <div className={s.button_box}>
               <div className={s.button_wrapper} ref={refs.button_projects}>
                 <MainButton
@@ -120,4 +132,3 @@ function HeroSection(): React.JSX.Element {
     </section>
   );
 }
-export default HeroSection;

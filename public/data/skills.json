@@ -1,0 +1,269 @@
+{
+  "concise": [
+    {
+      "skills_group_title": "Technologies:",
+      "skills_items": [
+        {
+          "skillName": "JavaScript",
+          "skillIcon": "/img/icons/js-icon.svg"
+        },
+        {
+          "skillName": "TypeScript",
+          "skillIcon": "/img/icons/ts-icon.svg"
+        },
+        {
+          "skillName": "React",
+          "skillIcon": "/img/icons/react-icon.svg"
+        },
+        {
+          "skillName": "Next.js",
+          "skillIcon": "/img/icons/next-icon.svg"
+        },
+        {
+          "skillName": "HTML5",
+          "skillIcon": "/img/icons/html-icon.svg"
+        },
+        {
+          "skillName": "CSS3 / SCSS Modules",
+          "skillIcon": "/img/icons/scss-icon.svg"
+        }
+      ]
+    },
+    {
+      "skills_group_title": "Libraries & Tools:",
+      "skills_items": [
+        {
+          "skillName": "Redux Toolkit",
+          "skillIcon": "/img/icons/rtk-icon.svg"
+        },
+        {
+          "skillName": "Vite",
+          "skillIcon": "/img/icons/vite-icon.svg"
+        },
+        {
+          "skillName": "Zod",
+          "skillIcon": "/img/icons/zod-icon.svg"
+        },
+        {
+          "skillName": "GSAP",
+          "skillIcon": "/img/icons/gsap-icon.svg"
+        },
+        {
+          "skillName": "Three.js",
+          "skillIcon": "/img/icons/threejs-icon.svg"
+        },
+        {
+          "skillName": "Splide",
+          "skillIcon": "/img/icons/splide-icon.svg"
+        },
+        {
+          "skillName": "Git",
+          "skillIcon": "/img/icons/git-icon.svg"
+        },
+        {
+          "skillName": "Figma",
+          "skillIcon": "/img/icons/figma-icon.svg"
+        }
+      ]
+    },
+    {
+      "skills_group_title": "Competencies:",
+      "skills_items": [
+        {
+          "skillName": "REST API Integration",
+          "skillIcon": "/img/icons/api-icon.svg"
+        },
+        {
+          "skillName": "Server-Side Rendering (SSR)",
+          "skillIcon": "/img/icons/ssr-icon.svg"
+        },
+        {
+          "skillName": "Responsive Design",
+          "skillIcon": "/img/icons/adaptive-icon.svg"
+        },
+        {
+          "skillName": "Semantic HTML",
+          "skillIcon": "/img/icons/semantic-icon.svg"
+        },
+        {
+          "skillName": "Performance Optimization",
+          "skillIcon": "/img/icons/optimization-icon.svg"
+        }
+      ]
+    },
+    {
+      "skills_group_title": "Languages:",
+      "skills_items": [
+        {
+          "skillName": "Russian (Native)",
+          "skillIcon": "/img/icons/rus.svg"
+        },
+        {
+          "skillName": "English (B2)",
+          "skillIcon": "/img/icons/eng.svg"
+        },
+        {
+          "skillName": "German (A2)",
+          "skillIcon": "/img/icons/ger.svg"
+        }
+      ]
+    }
+  ],
+  "expanded": [
+    {
+      "skills_group_title": "Technologies:",
+      "skills_items": [
+        {
+          "skillName": "JavaScript",
+          "skillIcon": "/img/icons/js-icon.svg",
+          "skillDescription": "I use JavaScript to implement interactive behavior, handle asynchronous operations, and build dynamic web interfaces."
+        },
+        {
+          "skillName": "TypeScript",
+          "skillIcon": "/img/icons/ts-icon.svg",
+          "skillDescription": "I use TypeScript across my React and Next.js projects to define data structures, type component props, and make application code more predictable and maintainable."
+        },
+        {
+          "skillName": "React",
+          "skillIcon": "/img/icons/react-icon.svg",
+          "skillDescription": "I build reusable React components and interactive interfaces, organizing UI logic into maintainable components and custom hooks."
+        },
+        {
+          "skillName": "Next.js",
+          "skillIcon": "/img/icons/next-icon.svg",
+          "skillDescription": "I develop multi-page websites with Next.js, using server-side rendering, dynamic routing, and API integrations to deliver production-ready websites."
+        },
+        {
+          "skillName": "HTML5",
+          "skillIcon": "/img/icons/html-icon.svg",
+          "skillDescription": "I write semantic HTML to create accessible, well-structured page layouts and interfaces."
+        },
+        {
+          "skillName": "CSS3 / SCSS Modules",
+          "skillIcon": "/img/icons/scss-icon.svg",
+          "skillDescription": "I use SCSS Modules to build responsive layouts, organize styles, and keep component styles isolated and maintainable."
+        }
+      ]
+    },
+    {
+      "skills_group_title": "State Management & Validation:",
+      "skills_items": [
+        {
+          "skillName": "Redux Toolkit",
+          "skillIcon": "/img/icons/rtk-icon.svg",
+          "skillDescription": "I use Redux Toolkit and React Redux to manage shared application state, including modal windows, user account features, and asynchronous workflows."
+        },
+        {
+          "skillName": "Zod",
+          "skillIcon": "/img/icons/zod-icon.svg",
+          "skillDescription": "I use Zod to define validation schemas and validate form data with clear, reusable rules."
+        }
+      ]
+    },
+    {
+      "skills_group_title": "UI, Animation & Visualization:",
+      "skills_items": [
+        {
+          "skillName": "GSAP",
+          "skillIcon": "/img/icons/gsap-icon.svg",
+          "skillDescription": "I use GSAP and ScrollTrigger to create scroll-based animations and interactive UI effects."
+        },
+        {
+          "skillName": "Three.js",
+          "skillIcon": "/img/icons/threejs-icon.svg",
+          "skillDescription": "I have used Three.js and custom shaders to create interactive WebGL effects, including a particle-based 3D logo."
+        },
+        {
+          "skillName": "Splide",
+          "skillIcon": "/img/icons/splide-icon.svg",
+          "skillDescription": "I use Splide with React to build responsive carousels and sliders with touch support and configurable behavior."
+        }
+      ]
+    },
+    {
+      "skills_group_title": "Build Tools & Code Quality:",
+      "skills_items": [
+        {
+          "skillName": "Vite",
+          "skillIcon": "/img/icons/vite-icon.svg",
+          "skillDescription": "I use Vite to develop and build React applications, benefiting from fast startup and an efficient development workflow."
+        },
+        {
+          "skillName": "ESLint",
+          "skillIcon": "/img/icons/eslint-icon.svg",
+          "skillDescription": "I use ESLint to identify potential issues and maintain consistent code quality."
+        }
+      ]
+    },
+    {
+      "skills_group_title": "Version Control & Collaboration:",
+      "skills_items": [
+        {
+          "skillName": "Git",
+          "skillIcon": "/img/icons/git-icon.svg",
+          "skillDescription": "I use Git to track changes, manage commits, and work with branches in project development."
+        },
+        {
+          "skillName": "GitHub",
+          "skillIcon": "/img/icons/github-icon.svg",
+          "skillDescription": "I use GitHub to host repositories and manage source code for personal and professional projects."
+        },
+        {
+          "skillName": "Figma",
+          "skillIcon": "/img/icons/figma-icon.svg",
+          "skillDescription": "I work with Figma designs to translate layouts and interface specifications into responsive frontend implementations."
+        }
+      ]
+    },
+    {
+      "skills_group_title": "Competencies:",
+      "skills_items": [
+        {
+          "skillName": "REST API Integration",
+          "skillIcon": "/img/icons/api-icon.svg",
+          "skillDescription": "I integrate frontend applications with REST APIs, handle asynchronous requests, and implement data-driven interfaces."
+        },
+        {
+          "skillName": "Server-Side Rendering (SSR)",
+          "skillIcon": "/img/icons/ssr-icon.svg",
+          "skillDescription": "I work with SSR in Next.js projects to render pages on the server and support content-driven websites."
+        },
+        {
+          "skillName": "Responsive Design",
+          "skillIcon": "/img/icons/adaptive-icon.svg",
+          "skillDescription": "I build responsive interfaces that adapt to different screen sizes and devices."
+        },
+        {
+          "skillName": "Semantic HTML",
+          "skillIcon": "/img/icons/semantic-icon.svg",
+          "skillDescription": "I use semantic elements to create meaningful document structure and improve accessibility and maintainability."
+        },
+        {
+          "skillName": "Performance Optimization",
+          "skillIcon": "/img/icons/optimization-icon.svg",
+          "skillDescription": "I consider page loading, rendering behavior, image delivery, and animation performance when developing frontend interfaces."
+        }
+      ]
+    },
+    {
+      "skills_group_title": "Languages:",
+      "skills_items": [
+        {
+          "skillName": "Russian (Native)",
+          "skillIcon": "/img/icons/rus.svg",
+          "skillDescription": "Russian is my native language."
+        },
+        {
+          "skillName": "English (B2)",
+          "skillIcon": "/img/icons/eng.svg",
+          "skillDescription": "I can read technical documentation and communicate about development topics in English."
+        },
+        {
+          "skillName": "German (A2)",
+          "skillIcon": "/img/icons/ger.svg",
+          "skillDescription": "I have a basic knowledge of German."
+        }
+      ]
+    }
+  ]
+}

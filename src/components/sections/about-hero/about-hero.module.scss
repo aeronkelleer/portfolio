@@ -29,7 +29,7 @@
 .image_wrapper {
   @include MEDIA($MID_WIDTH) {
     width: 100%;
-    height: tab(400px, 200px);
+    height: adapt(400px, 200px);
   }
 
   img {

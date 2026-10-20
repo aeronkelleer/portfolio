@@ -1,0 +1,66 @@
+[
+  {
+    "href": "https://advline.ru/",
+    "label": "advline",
+    "title": "Advline",
+    "desc": "A multi-page corporate website built with Next.js and TypeScript. Features API-driven content, dynamic routes for blog articles, job listings from hh.ru, contact forms, and GSAP animations. Live in production.",
+    "fullDesc": "A multi-page corporate website for a digital marketing agency, built with Next.js and TypeScript using server-side rendering.\nThe website includes service pages, case studies, articles, vacancies, and team sections. Dynamic content is fetched from backend APIs, including blog articles managed through an admin panel and job listings from hh.ru. Blog articles use dynamic routes, with structured JSON data rendered on dedicated pages. I also implemented contact forms and scroll-based animations using GSAP.\nThe website is deployed in production.",
+    "technologies": [
+      "Next.js",
+      "TypeScript",
+      "SCSS Modules",
+      "SSR",
+      "API Integration",
+      "GSAP"
+    ],
+    "imgSrc": "/img/projects/advline.png"
+  },
+  {
+    "href": "https://paradocs.ru/",
+    "label": "paradocs",
+    "title": "Paradocs",
+    "desc": "A multi-page corporate website for an AdTech platform, built with Next.js and TypeScript. Features API-driven content, server-side rendering, contact forms, theme switching, and animated UI elements. Live in production.",
+    "fullDesc": "A multi-page corporate website for Paradocs, a platform for programmatic digital advertising. Built with Next.js and TypeScript, the project uses server-side rendering and API integration to retrieve dynamic content managed through a backend admin panel.\nThe website includes product and service pages, advertising platform descriptions, contact forms, and content-driven sections. I implemented reusable interface components, responsive layouts, and scroll-based animations using GSAP. The project also includes light and dark theme switching implemented with CSS variables.\nThe website is running in production.",
+    "technologies": [
+      "Next.js",
+      "TypeScript",
+      "SCSS Modules",
+      "SSR",
+      "API Integration",
+      "GSAP"
+    ],
+    "imgSrc": "/img/projects/paradocs.png"
+  },
+  {
+    "href": "https://my.weba.net/",
+    "label": "weba-account",
+    "title": "WEBA — Personal Account",
+    "desc": "A production single-page application built with React and TypeScript. Features API-driven customer data, authentication, protected account access, and feedback forms.",
+    "fullDesc": "A single-page application for customers of the WEBA internet service provider, built with React, TypeScript, and Vite.\nThe application provides authentication, protected account access, customer account information, and feedback forms. I implemented frontend components, managed shared application state with Redux Toolkit, and integrated the application with the backend API to retrieve and submit data.\nThe application is available to real customers in production.",
+    "technologies": [
+      "React",
+      "TypeScript",
+      "Vite",
+      "SCSS Modules",
+      "Redux Toolkit",
+      "API Integration"
+    ],
+    "imgSrc": "/img/projects/weba-account.png"
+  },
+  {
+    "href": "https://dev.weba.net/coverage-zone/",
+    "label": "weba-coverage-zone",
+    "title": "WEBA — Coverage Zone",
+    "desc": "An interactive coverage-zone page for an internet service provider, built with Next.js and TypeScript. Features API-driven location data, dynamic routes for districts, streets, houses, and addresses, and connection availability checks. Available in a development environment.",
+    "fullDesc": "A coverage-zone page for WEBA, an internet service provider, designed to help visitors check network coverage and find out whether their home can be connected.\nThe project uses API-driven location data and dynamic routes for districts, streets, houses, and addresses, providing dedicated pages for different locations. The interface includes address search, connection availability checks, and forms for connection requests.\nThe page is currently available in the development environment and has not been released to production.",
+    "technologies": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "SCSS Modules",
+      "SSR",
+      "API Integration"
+    ],
+    "imgSrc": "/img/projects/weba-coverage-zone.png"
+  }
+]

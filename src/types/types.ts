@@ -1,15 +1,15 @@
 export type SkillType = {
   skillsGroupTitle: string;
-  skillsItems: SkillItemType[],
+  skillsItems: SkillItem[];
 };
 
-export type SkillItemType = {
-  skillName: string,
-  skillIcon: string,
+export type SkillItem = {
+  skillName: string;
+  skillIcon: string;
   skillDescription?: string;
 };
 
-export type WorkType = {
+export type Project = {
   href: string;
   label: string;
   title: string;
@@ -19,4 +19,14 @@ export type WorkType = {
   imgSrc: string;
   gifSrc?: string;
   gifMobSrc?: string;
+};
+
+export type Certificate = {
+  path: string;
+};
+
+export type Contact = {
+  href: string;
+  icon: string;
+  text: string;
 };

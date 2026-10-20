@@ -59,7 +59,7 @@
       font-size: desk(18px, 16px);
 
       @include MEDIA($TAB_WIDTH) {
-        font-size: tab(16px, 14px);
+        font-size: adapt(16px, 14px);
       }
     }
   }
@@ -95,7 +95,7 @@
   min-height: desk(360px, 200px);
 
   @include MEDIA($TAB_WIDTH) {
-    min-height: tab(200px, 0);
+    min-height: adapt(200px, 0);
   }
 
   @include MEDIA($MID_WIDTH) {
@@ -138,7 +138,7 @@
   font-weight: 700;
 
   @include MEDIA($TAB_WIDTH) {
-    font-size: tab(20px, 18px);
+    font-size: adapt(20px, 18px);
   }
 }
 
@@ -148,7 +148,7 @@
   gap: desk(8px, 6px);
 
   @include MEDIA($TAB_WIDTH) {
-    gap: tab(6px, 4px);
+    gap: adapt(6px, 4px);
   }
 }
 
@@ -156,7 +156,7 @@
   font-size: desk(16px, 14px);
 
   @include MEDIA($TAB_WIDTH) {
-    font-size: tab(14px, 12px);
+    font-size: adapt(14px, 12px);
   }
 }
 

@@ -32,7 +32,7 @@
       font-size: desk(18px, 16px);
 
       @include MEDIA($TAB_WIDTH) {
-        font-size: tab(18px, 14px);
+        font-size: adapt(18px, 14px);
       }
     }
   }
@@ -53,7 +53,7 @@
   transition: all 250ms;
 
   @include MEDIA($TAB_WIDTH) {
-    padding-inline: tab(12px, 10px);
+    padding-inline: adapt(12px, 10px);
   }
 }
 
@@ -74,6 +74,6 @@
   font-size: desk(16px, 14px);
 
   @include MEDIA($TAB_WIDTH) {
-    font-size: tab(16px, 14px);
+    font-size: adapt(16px, 14px);
   }
 }

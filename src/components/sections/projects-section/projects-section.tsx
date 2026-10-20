@@ -5,15 +5,20 @@ import ProjectsList from '@/components/layout/projects-list/projects-list';
 import Heading from '@/components/ui/heading/heading';
 import MainButton from '@/components/ui/main-button/main-button';
 import { AppRoute, basePath } from '@/constants/const';
-import { PROJECTS } from '@/data/projects';
 import { useTransitionLink } from '@/hooks/use-transition-link';
+import { Project } from '@/types/types';
 import s from './projects-section.module.scss';
 
 // @======================== ProjectsSection ========================@ //
 
-function ProjectsSection(): React.JSX.Element {
+interface ProjectsSectionProps {
+  projects: Project[];
+}
 
-  const projectsList = PROJECTS.slice(0, 4);
+function ProjectsSection(props: ProjectsSectionProps): React.JSX.Element {
+  const { projects } = props;
+
+  const projectsList = projects.slice(0, 4);
   const { handleTransition } = useTransitionLink();
 
   return (

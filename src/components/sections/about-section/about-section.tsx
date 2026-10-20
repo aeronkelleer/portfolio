@@ -5,17 +5,22 @@ import Container from '@/components/shared/container/container';
 import Heading from '@/components/ui/heading/heading';
 import MainButton from '@/components/ui/main-button/main-button';
 import { AppRoute, basePath } from '@/constants/const';
-import { aboutSectionText } from '@/data/about';
-import { SKILLS_CONCISE } from '@/data/skills';
 import { useTransitionLink } from '@/hooks/use-transition-link';
 import { gsap, useGSAP } from '@/lib/gsap';
+import { SkillType } from '@/types/types';
 import { splitTextToParagraphs } from '@/utils/utils';
 import { useRef } from 'react';
 import s from './about-section.module.scss';
 
 // @======================== AboutSection ========================@ //
 
-function AboutSection(): React.JSX.Element {
+interface AboutSectionProps {
+  text: string;
+  skills: SkillType[];
+}
+
+export default function AboutSection(props: AboutSectionProps) {
+  const { text, skills } = props;
 
   const refs = {
     section: useRef<HTMLDivElement | null>(null),
@@ -23,7 +28,7 @@ function AboutSection(): React.JSX.Element {
     textBox: useRef<HTMLDivElement | null>(null),
     skillsHeading: useRef<HTMLHeadingElement | null>(null),
     skillsRows: useRef<(HTMLDivElement | null)[]>([]),
-    button: useRef<HTMLDivElement | null>(null)
+    button: useRef<HTMLDivElement | null>(null),
   };
 
   useGSAP(() => {
@@ -37,7 +42,7 @@ function AboutSection(): React.JSX.Element {
           start: '50% 25%',
           end: '100% 0%',
           scrub: 1,
-        }
+        },
       });
     };
 
@@ -55,24 +60,21 @@ function AboutSection(): React.JSX.Element {
   return (
     <section className={s.section} id='about' ref={refs.section}>
       <Container>
-        <div className={s.inner} >
-          <div className={s.header} >
-            <div className={s.info} >
+        <div className={s.inner}>
+          <div className={s.header}>
+            <div className={s.info}>
               <Heading className={s.heading} ref={refs.heading}>
-                Hi! My name is Alex and I am a frontend developer
+                About me
               </Heading>
               <div className={s.text_box} ref={refs.textBox}>
-                {splitTextToParagraphs(aboutSectionText).map((paragraph, index) => (
+                {splitTextToParagraphs(text).map((paragraph, index) => (
                   <p key={index} className={s.text}>
                     {paragraph}
                   </p>
                 ))}
               </div>
             </div>
-            <Skills
-              data={SKILLS_CONCISE}
-              refs={{ heading: refs.skillsHeading, itemRows: refs.skillsRows }}
-            />
+            <Skills skills={skills} refs={{ heading: refs.skillsHeading, itemRows: refs.skillsRows }} />
           </div>
           <div ref={refs.button}>
             <MainButton
@@ -87,7 +89,6 @@ function AboutSection(): React.JSX.Element {
           </div>
         </div>
       </Container>
-    </section >
+    </section>
   );
 }
-export default AboutSection;

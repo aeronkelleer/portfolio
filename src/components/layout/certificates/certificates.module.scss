@@ -9,7 +9,7 @@
   text-align: left;
 
   @include MEDIA($TAB_WIDTH) {
-    margin-bottom: tab(28px, 20px);
+    margin-bottom: adapt(28px, 20px);
   }
 }
 

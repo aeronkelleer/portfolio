@@ -36,7 +36,7 @@
   transition: all .3s;
 
   @include MEDIA($MID_WIDTH) {
-    font-size: mid(32px, 24px);
+    font-size: adapt(32px, 24px);
   }
 
   &::after {

@@ -22,10 +22,10 @@
     &:not(._detailed) {
       display: flex;
       width: 100vw;
-      height: calc(100dvh - mid(350px, 150px));
+      height: calc(100dvh - adapt(350px, 150px));
       margin-inline: 0;
       position: relative;
-      left: calc(-1 * mid(23px, 16px));
+      left: calc(-1 * adapt(23px, 16px));
       overflow: auto;
       justify-items: start;
       scroll-snap-type: x mandatory;

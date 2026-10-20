@@ -15,7 +15,7 @@
   gap: desk(50px, 25px);
 
   @include MEDIA($TAB_WIDTH) {
-    gap: tab(25px, 20spx);
+    gap: adapt(25px, 20spx);
   }
 
   @include MEDIA($MID_WIDTH) {
@@ -29,7 +29,7 @@
   gap: desk(32px);
 
   @include MEDIA($TAB_WIDTH) {
-    gap: tab(32px, 18px);
+    gap: adapt(32px, 18px);
   }
 
   @include MEDIA($MID_WIDTH) {
@@ -45,8 +45,8 @@
   text-wrap: balance;
 
   @include MEDIA($TAB_WIDTH) {
-    margin-bottom: tab(20px, 12px);
-    font-size: tab(30px, 24px);
+    margin-bottom: adapt(20px, 12px);
+    font-size: adapt(30px, 24px);
   }
 }
 
@@ -67,7 +67,7 @@
   text-align: justify;
 
   @include MEDIA($TAB_WIDTH) {
-    font-size: tab(20px, 14px);
+    font-size: adapt(20px, 14px);
   }
 }
 

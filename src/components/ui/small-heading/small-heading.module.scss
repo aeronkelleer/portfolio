@@ -8,6 +8,6 @@
   font-weight: 900;
 
   @include MEDIA($TAB_WIDTH) {
-    font-size: tab(32px, 24px);
+    font-size: adapt(32px, 24px);
   }
 }

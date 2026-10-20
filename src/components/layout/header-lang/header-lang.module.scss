@@ -32,7 +32,7 @@
   @include square(desk(28px, 20px));
 
   @include MEDIA($MID_WIDTH) {
-    @include square(mid(40px, 32px));
+    @include square(adapt(40px, 32px));
   }
 
   img {
@@ -46,7 +46,7 @@
   font-size: desk(14px);
 
   @include MEDIA($MID_WIDTH) {
-    font-size: mid(28px, 22px);
+    font-size: adapt(28px, 22px);
   }
 }
 
@@ -83,6 +83,6 @@
   font-size: desk(14px);
 
   @include MEDIA($MID_WIDTH) {
-    font-size: mid(28px, 22px);
+    font-size: adapt(28px, 22px);
   }
 }

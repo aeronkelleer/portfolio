@@ -33,7 +33,7 @@
   margin-top: desk(60px, 40px);
 
   @include MEDIA($TAB_WIDTH) {
-    margin-top: tab(40px, 20px);
+    margin-top: adapt(40px, 20px);
   }
 }
 

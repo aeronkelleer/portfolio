@@ -13,7 +13,7 @@
   text-align: center;
 
   @include MEDIA($TAB_WIDTH) {
-    margin-bottom: tab(50px, 20px);
+    margin-bottom: adapt(50px, 20px);
   }
 }
 
@@ -65,7 +65,7 @@
   @include square(desk(24px));
 
   @include MEDIA($TAB_WIDTH) {
-    @include square(tab(24px, 20px));
+    @include square(adapt(24px, 20px));
   }
 
   path {

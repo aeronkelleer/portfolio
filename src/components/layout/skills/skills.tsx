@@ -13,7 +13,7 @@ import s from './skills.module.scss';
 // @======================== Skills ========================@ //
 
 type SkillsProps = {
-  data: SkillType[];
+  skills: SkillType[];
   refs?: {
     heading: RefObject<HTMLHeadingElement | null>;
     itemRows: RefObject<(HTMLDivElement | null)[]>;
@@ -21,24 +21,24 @@ type SkillsProps = {
 };
 
 export default function Skills(skillsProps: SkillsProps) {
-
-  const { data, refs } = skillsProps;
+  const { skills, refs } = skillsProps;
   const pathname = usePathname();
 
   return (
-    <div
-      className={clsx(
-        s.skills,
-        { [s._expanded]: pathname === AppRoute.ABOUT }
-      )}
-    >
+    <div className={clsx(s.skills, { [s._expanded]: pathname === AppRoute.ABOUT })}>
       <SmallHeading className={s.heading} ref={refs?.heading}>
         My skills
       </SmallHeading>
       <Container className={s.container}>
-        {data.map(({ skillsGroupTitle, skillsItems }, index) => {
+        {skills.map(({ skillsGroupTitle, skillsItems }, index) => {
           return (
-            <div key={index} className={s.group} ref={(el) => { if (el && refs) refs.itemRows.current[index] = el; }}>
+            <div
+              key={index}
+              className={s.group}
+              ref={(el) => {
+                if (el && refs) refs.itemRows.current[index] = el;
+              }}
+            >
               <p className={s.group_title}>{skillsGroupTitle}</p>
               <ul className={s.list}>
                 {skillsItems.map(({ skillIcon, skillName, skillDescription }, index) => {

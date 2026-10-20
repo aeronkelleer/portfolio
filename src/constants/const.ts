@@ -1,11 +1,9 @@
-export const basePath = process.env.NODE_ENV === 'production'
-  ? '/portfolio'
-  : '';
+export const basePath = process.env.NODE_ENV === 'production' ? '/portfolio' : '';
 
 export enum AppRoute {
   MAIN = '/',
   ABOUT = '/about',
-  PROJECTS = '/projects'
+  PROJECTS = '/projects',
 }
 
 export const HEADER_MENU_ITEMS = [
@@ -30,7 +28,7 @@ export const HEADER_MENU_ITEMS = [
 export const PAGE_TRANSITION_TIME = 180;
 
 export enum NameSpace {
-  OPEN_ELEMENTS = 'OPEN_ELEMENTS'
+  OPEN_ELEMENTS = 'OPEN_ELEMENTS',
 }
 
 export enum OpenElement {

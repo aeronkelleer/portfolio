@@ -1,19 +1,23 @@
 import ProjectsList from '@/components/layout/projects-list/projects-list';
 import Container from '@/components/shared/container/container';
 import Heading from '@/components/ui/heading/heading';
-import { PROJECTS } from '@/data/projects';
+import { Project } from '@/types/types';
 import s from './projects-hero.module.scss';
 
 // @======================== ProjectsHero ========================@ //
 
-function ProjectsHero(): React.JSX.Element {
+interface ProjectsHeroProps {
+  projects: Project[];
+}
+
+function ProjectsHero(props: ProjectsHeroProps): React.JSX.Element {
+  const { projects } = props;
+
   return (
     <section className={s.projects_hero}>
       <Container>
-        <Heading className={s.heading}>
-          My Projects
-        </Heading>
-        <ProjectsList projects={PROJECTS} className={s.list} />
+        <Heading className={s.heading}>My Projects</Heading>
+        <ProjectsList projects={projects} className={s.list} />
       </Container>
     </section>
   );
