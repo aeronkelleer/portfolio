@@ -15,7 +15,7 @@ interface ProjectsSectionProps {
   projects: Project[];
 }
 
-function ProjectsSection(props: ProjectsSectionProps): React.JSX.Element {
+export default function ProjectsSection(props: ProjectsSectionProps): React.JSX.Element {
   const { projects } = props;
 
   const projectsList = projects.slice(0, 4);
@@ -41,4 +41,3 @@ function ProjectsSection(props: ProjectsSectionProps): React.JSX.Element {
     </section>
   );
 }
-export default ProjectsSection;

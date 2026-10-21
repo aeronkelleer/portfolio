@@ -1,13 +1,11 @@
-@use '../../../styles/abstracts/' as *;
-
 //^======================== skill ========================^//
 
 .skill {
   &._expanded {
-    align-items: center;
-    gap: desk(20px);
     display: grid;
     grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 20px;
 
     @include MEDIA($TAB_WIDTH) {
       display: flex;
@@ -17,7 +15,7 @@
     }
 
     .inner {
-      width: desk(320px, 320px);
+      width: 320px;
 
       @include MEDIA($MID_WIDTH) {
         width: 100%;
@@ -25,11 +23,19 @@
     }
 
     .icon {
-      @include square(desk(36px, 24px));
+      @include square(36px);
+
+      @include MEDIA($CONT_WIDTH) {
+        @include square(adapt(36px, 24px));
+      }
     }
 
     .name {
-      font-size: desk(18px, 16px);
+      font-size: 18px;
+
+      @include MEDIA($CONT_WIDTH) {
+        font-size: adapt(18px, 16px);
+      }
 
       @include MEDIA($TAB_WIDTH) {
         font-size: adapt(18px, 14px);
@@ -41,16 +47,21 @@
 .inner {
   display: flex;
   align-items: center;
-  gap: desk(10px);
-  padding-inline: desk(16px, 12px);
-  padding-block: desk(8px, 6px);
-  border: desk(1px) solid var(--secondary50);
-  border-radius: desk(16px);
-  background-color: var(--gray);
-  letter-spacing: 0.8;
+  gap: 10px;
+  padding-inline: 16px;
+  padding-block: 8px;
   position: relative;
+  border: 1px solid var(--secondary50);
+  border-radius: 16px;
+  background-color: var(--gray);
   backdrop-filter: blur(max(0.417vw, 6px));
+  letter-spacing: 0.8;
   transition: all 250ms;
+
+  @include MEDIA($CONT_WIDTH) {
+    padding-inline: adapt(16px, 12px);
+    padding-block: adapt(8px, 6px);
+  }
 
   @include MEDIA($TAB_WIDTH) {
     padding-inline: adapt(12px, 10px);
@@ -59,11 +70,19 @@
 
 
 .description {
-  font-size: desk(16px, 14px);
+  font-size: 16px;
+
+  @include MEDIA($CONT_WIDTH) {
+    font-size: adapt(16px, 14px);
+  }
 }
 
 .icon {
-  @include square(desk(24px, 18px));
+  @include square(24px);
+
+  @include MEDIA($CONT_WIDTH) {
+    @include square(adapt(24px, 18px));
+  }
 
   img {
     @include square(100%);
@@ -71,7 +90,12 @@
 }
 
 .name {
-  font-size: desk(16px, 14px);
+  font-size: 16px;
+  cursor: default;
+
+  @include MEDIA($CONT_WIDTH) {
+    font-size: adapt(16px, 14px);
+  }
 
   @include MEDIA($TAB_WIDTH) {
     font-size: adapt(16px, 14px);

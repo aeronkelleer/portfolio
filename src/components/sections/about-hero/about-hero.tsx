@@ -1,4 +1,4 @@
-import Container from '@/components/shared/container/container';
+import Container from '@/components/layout/container/container';
 import Heading from '@/components/ui/heading/heading';
 import { basePath } from '@/constants/const';
 import { splitTextToParagraphs } from '@/utils/utils';

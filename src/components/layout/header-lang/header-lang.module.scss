@@ -2,9 +2,9 @@
 
 .headerLang {
   display: flex;
+  padding-inline: 6px;
   position: relative;
   cursor: pointer;
-  padding-inline: desk(6px);
 
   @include MEDIA($MID_WIDTH) {
     width: auto;
@@ -26,10 +26,14 @@
 
 .icon {
   flex-shrink: 0;
-  margin-right: desk(10px);
+  margin-right: 10px;
   overflow: clip;
   border-radius: 50%;
-  @include square(desk(28px, 20px));
+  @include square(28px);
+
+  @include MEDIA($CONT_WIDTH) {
+    @include square(adapt(28px, 20px));
+  }
 
   @include MEDIA($MID_WIDTH) {
     @include square(adapt(40px, 32px));
@@ -43,7 +47,7 @@
 
 .name {
   color: var(--secondary);
-  font-size: desk(14px);
+  font-size: 14px;
 
   @include MEDIA($MID_WIDTH) {
     font-size: adapt(28px, 22px);
@@ -51,16 +55,16 @@
 }
 
 .dropdown {
-  padding-block: desk(4px);
+  padding-inline: 6px;
+  padding-block: 4px;
   position: absolute;
   left: -1px;
   top: 100%;
   visibility: hidden;
   opacity: 0;
   border-radius: 0 0 10px 10px;
-  transition: all .3s;
   background-image: linear-gradient(to bottom, transparent 0%, var(--bg) 30%);
-  padding-inline: desk(6px);
+  transition: all .3s;
 
   @include MEDIA($MID_WIDTH) {
     margin-inline: auto;
@@ -79,8 +83,8 @@
 }
 
 .dropdown_name {
+  font-size: 14px;
   transition: all 250ms;
-  font-size: desk(14px);
 
   @include MEDIA($MID_WIDTH) {
     font-size: adapt(28px, 22px);

@@ -2,9 +2,9 @@ import aboutData from '@/../public/data/about.json';
 import certificatesData from '@/../public/data/certificates.json';
 import skillsData from '@/../public/data/skills.json';
 import Certificates from '@/components/layout/certificates/certificates';
+import Container from '@/components/layout/container/container';
 import Skills from '@/components/layout/skills/skills';
 import AboutHero from '@/components/sections/about-hero/about-hero';
-import Container from '@/components/shared/container/container';
 import { convertKeysToCamelCase } from '@/utils/utils';
 import { Metadata } from 'next';
 

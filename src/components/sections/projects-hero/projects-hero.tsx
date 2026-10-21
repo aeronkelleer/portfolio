@@ -1,5 +1,5 @@
+import Container from '@/components/layout/container/container';
 import ProjectsList from '@/components/layout/projects-list/projects-list';
-import Container from '@/components/shared/container/container';
 import Heading from '@/components/ui/heading/heading';
 import { Project } from '@/types/types';
 import s from './projects-hero.module.scss';
@@ -10,7 +10,7 @@ interface ProjectsHeroProps {
   projects: Project[];
 }
 
-function ProjectsHero(props: ProjectsHeroProps): React.JSX.Element {
+export default function ProjectsHero(props: ProjectsHeroProps): React.JSX.Element {
   const { projects } = props;
 
   return (
@@ -22,4 +22,3 @@ function ProjectsHero(props: ProjectsHeroProps): React.JSX.Element {
     </section>
   );
 }
-export default ProjectsHero;

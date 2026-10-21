@@ -1,5 +1,3 @@
-@use '../../../styles/abstracts/' as *;
-
 // @======================== about ========================@ //
 
 .section {
@@ -12,7 +10,11 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  gap: desk(50px, 25px);
+  gap: 50px;
+
+  @include MEDIA($CONT_WIDTH) {
+    gap: adapt(50px, 25px);
+  }
 
   @include MEDIA($TAB_WIDTH) {
     gap: adapt(25px, 20spx);
@@ -26,7 +28,7 @@
 .header {
   display: flex;
   flex-direction: column;
-  gap: desk(32px);
+  gap: 32px;
 
   @include MEDIA($TAB_WIDTH) {
     gap: adapt(32px, 18px);
@@ -39,10 +41,14 @@
 }
 
 .heading {
-  margin-bottom: desk(20px);
-  font-size: desk(40px, 30px);
+  margin-bottom: 20px;
+  font-size: 40px;
   text-align: left;
   text-wrap: balance;
+
+  @include MEDIA($CONT_WIDTH) {
+    font-size: adapt(40px, 30px);
+  }
 
   @include MEDIA($TAB_WIDTH) {
     margin-bottom: adapt(20px, 12px);
@@ -58,13 +64,21 @@
 }
 
 .text_box {
-  gap: desk(12px, 8px);
+  gap: 12px;
   margin-top: auto;
+
+  @include MEDIA($CONT_WIDTH) {
+    gap: adapt(12px, 8px);
+  }
 }
 
 .text {
-  font-size: desk(20px, 18px);
+  font-size: 20px;
   text-align: justify;
+
+  @include MEDIA($CONT_WIDTH) {
+    font-size: adapt(20px, 18px);
+  }
 
   @include MEDIA($TAB_WIDTH) {
     font-size: adapt(20px, 14px);

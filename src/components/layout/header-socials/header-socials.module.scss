@@ -1,10 +1,12 @@
-@use '../../../styles/abstracts/' as *;
-
 // ^======================== header-socials ========================^ //
 
 .headerSocials {
   flex: 1 1 auto;
-  max-width: desk(350px, 140px);
+  max-width: 350px;
+
+  @include MEDIA($CONT_WIDTH) {
+    max-width: adapt(350px, 140px);
+  }
 
   @include MEDIA($MID_WIDTH) {
     display: none;
@@ -24,8 +26,12 @@
 
 .link {
   display: block;
-  width: desk(24px, 20px);
   aspect-ratio: 1;
+  width: 24px;
+
+  @include MEDIA($CONT_WIDTH) {
+    width: adapt(24px, 20px);
+  }
 
   svg {
     width: 100%;

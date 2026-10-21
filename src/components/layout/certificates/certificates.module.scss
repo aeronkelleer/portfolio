@@ -1,12 +1,14 @@
-@use '../../../styles/abstracts/' as *;
-
 // $======================== certificates ========================$ //
 
 .certificates {}
 
 .heading {
-  margin-bottom: desk(32px, 28px);
+  margin-bottom: 32px;
   text-align: left;
+
+  @include MEDIA($CONT_WIDTH) {
+    margin-bottom: adapt(32px, 28px);
+  }
 
   @include MEDIA($TAB_WIDTH) {
     margin-bottom: adapt(28px, 20px);
@@ -15,7 +17,11 @@
 
 .list {
   display: flex;
-  gap: desk(40px, 32px);
+  gap: 40px;
+
+  @include MEDIA($CONT_WIDTH) {
+    gap: adapt(40px, 32px);
+  }
 
   @include MEDIA($TAB_WIDTH) {
     flex-direction: column;
@@ -23,6 +29,9 @@
 }
 
 .item {
+  overflow: clip;
+  border-radius: 16px;
+
   @include MEDIA($TAB_WIDTH) {
     width: 400px;
   }

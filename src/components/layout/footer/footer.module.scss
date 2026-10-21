@@ -1,15 +1,13 @@
-@use '../../../styles/abstracts/' as *;
-
 // $======================== footer ========================$ //
 
 .footer {
-  padding-top: desk(40px);
-  padding-bottom: desk(60px);
+  padding-top: 40px;
+  padding-bottom: 60px;
   background-image: var(--orangeGradient);
 }
 
 .heading {
-  margin-bottom: desk(30px);
+  margin-bottom: 30px;
   text-align: center;
 
   @include MEDIA($TAB_WIDTH) {
@@ -28,7 +26,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: desk(20px);
+  gap: 20px;
 
   @include MEDIA($TAB_WIDTH) {
     flex-direction: column;
@@ -55,21 +53,26 @@
 .link {
   display: flex;
   align-items: center;
-  gap: desk(10px, 8px);
-  font-size: desk(20px, 16px);
-  transition: all 250ms;
+  gap: 10px;
   color: inherit;
+  font-size: 20px;
+  transition: all 250ms;
+
+  @include MEDIA($CONT_WIDTH) {
+    gap: adapt(10px, 8px);
+    font-size: adapt(20px, 16px);
+  }
 }
 
 .link_icon {
-  @include square(desk(24px));
+  @include square(24px);
 
   @include MEDIA($TAB_WIDTH) {
     @include square(adapt(24px, 20px));
   }
 
   path {
-    transition: all 250ms;
     fill: #fff;
+    transition: all 250ms;
   }
 }

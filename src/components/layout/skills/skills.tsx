@@ -1,7 +1,7 @@
 'use client';
 
+import Heading from '@/components/ui/heading/heading';
 import Skill from '@/components/ui/skill/skill';
-import SmallHeading from '@/components/ui/small-heading/small-heading';
 import { AppRoute } from '@/constants/const';
 import { SkillType } from '@/types/types';
 import clsx from 'clsx';
@@ -26,9 +26,9 @@ export default function Skills(skillsProps: SkillsProps) {
 
   return (
     <div className={clsx(s.skills, { [s._expanded]: pathname === AppRoute.ABOUT })}>
-      <SmallHeading className={s.heading} ref={refs?.heading}>
+      <Heading className={s.heading} ref={refs?.heading} type='small'>
         My skills
-      </SmallHeading>
+      </Heading>
       <Container className={s.container}>
         {skills.map(({ skillsGroupTitle, skillsItems }, index) => {
           return (

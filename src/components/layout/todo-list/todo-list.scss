@@ -2,48 +2,48 @@
 
 .todo-list {
   background-color: $white;
-  width: desk(500px);
-  height: desk(400px);
-  border-radius: desk(14px);
-  padding: desk(20px);
+  width: 500px;
+  height: 400px;
+  border-radius: 14px;
+  padding: 20px;
   color: $gray;
   display: flex;
   flex-direction: column;
 
   &__title {
-    font-size: desk(24px);
+    font-size: 24px;
     font-weight: 600;
-    margin-bottom: desk(16px);
+    margin-bottom: 16px;
   }
 
   &__field {
     background-color: $lightGray;
     display: flex;
     justify-content: space-between;
-    height: desk(50px);
-    border-radius: desk(100px);
+    height: 50px;
+    border-radius: 100px;
     transition: all 250ms;
-    margin-bottom: desk(20px);
+    margin-bottom: 20px;
 
     &:has(input:focus) {
-      box-shadow: 0 0 desk(20px) 0 #b4b4b4;
+      box-shadow: 0 0 20px 0 #b4b4b4;
     }
   }
 
   &__input {
-    font-size: desk(16px);
+    font-size: 16px;
     width: 100%;
-    padding-inline: desk(20px);
+    padding-inline: 20px;
   }
 
   &__button {
     background-image: $blueGradient;
     color: $white;
     height: 100%;
-    padding-inline: desk(38px);
+    padding-inline: 38px;
     border-radius: inherit;
     font-weight: 600;
-    font-size: desk(18px);
+    font-size: 18px;
   }
 
   &__items-container {
@@ -52,13 +52,13 @@
   }
 
   &__items {
-    padding-inline: desk(10px);
+    padding-inline: 10px;
     display: flex;
     flex-direction: column;
-    row-gap: desk(10px);
+    row-gap: 10px;
   }
 
   &__item {
-    font-size: desk(18px);
+    font-size: 18px;
   }
 }

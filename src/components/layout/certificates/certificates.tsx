@@ -1,4 +1,4 @@
-import SmallHeading from '@/components/ui/small-heading/small-heading';
+import Heading from '@/components/ui/heading/heading';
 import { basePath } from '@/constants/const';
 import { Certificate } from '@/types/types';
 import Image from 'next/image';
@@ -12,7 +12,9 @@ export default function Certificates(props: CertificatesProps): React.JSX.Elemen
   const { certificates } = props;
   return (
     <div className={s.certificates}>
-      <SmallHeading className={s.heading}>My certificates</SmallHeading>
+      <Heading type='small' className={s.heading}>
+        My certificates
+      </Heading>
       <ul className={s.list}>
         {certificates.map(({ path }, index) => (
           <li key={index} className={s.item}>

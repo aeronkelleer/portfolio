@@ -1,23 +1,28 @@
 import clsx from 'clsx';
-import { ReactNode, RefObject } from 'react';
+import type { ReactNode, RefObject } from 'react';
 import s from './heading.module.scss';
 
 // ^======================== Heading ========================^ //
 
-type HeadingProps = {
+type HeadingType = 'main' | 'regular' | 'small';
+
+interface HeadingProps {
+  type?: HeadingType;
+  className?: string;
   children: ReactNode;
-  className: string;
   ref?: RefObject<HTMLHeadingElement | null>;
+}
+
+const HEADING_TAG: Record<HeadingType, 'h1' | 'h2' | 'h3'> = {
+  main: 'h1',
+  regular: 'h2',
+  small: 'h3',
 };
 
-function Heading(headingProps: HeadingProps): React.JSX.Element {
+export default function Heading(props: HeadingProps) {
+  const { type = 'regular', className, children, ref } = props;
 
-  const { children, className, ref } = headingProps;
+  const Tag = HEADING_TAG[type];
 
-  return (
-    <h2 className={clsx(className, s.heading)} ref={ref}>
-      {children}
-    </h2>
-  );
+  return <Tag className={clsx(className, s.heading, s[`_${type}`])} ref={ref}>{children}</Tag>;
 }
-export default Heading;

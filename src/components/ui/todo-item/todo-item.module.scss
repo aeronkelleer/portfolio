@@ -3,7 +3,7 @@
 .todo-item {
   display: flex;
   align-items: center;
-  gap: desk(20px);
+  gap: 20px;
 
   &._checked {
     .todo-item {
@@ -21,7 +21,7 @@
   background-position: center;
   cursor: pointer;
   transition: all 250ms;
-  @include square(desk(20px));
+  @include square(20px);
 
   &:has(input:checked) {
     background-color: $blue;
@@ -42,7 +42,7 @@
 }
 
 .button-cross {
-  font-size: desk(26px);
+  font-size: 26px;
   line-height: 1;
   rotate: 45deg;
 }

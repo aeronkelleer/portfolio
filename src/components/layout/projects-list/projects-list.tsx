@@ -14,7 +14,7 @@ type ProjectsProps = {
   className: string;
 };
 
-function ProjectsList(projectsProps: ProjectsProps): React.JSX.Element {
+export default function ProjectsList(projectsProps: ProjectsProps): React.JSX.Element {
   const { projects, className } = projectsProps;
 
   const pathname = usePathname();
@@ -28,4 +28,3 @@ function ProjectsList(projectsProps: ProjectsProps): React.JSX.Element {
     </ul>
   );
 }
-export default ProjectsList;

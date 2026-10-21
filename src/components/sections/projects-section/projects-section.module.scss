@@ -1,5 +1,3 @@
-@use '../../../styles/abstracts/' as *;
-
 // @======================== projects ========================@ //
 
 .projects_section {}
@@ -30,7 +28,11 @@
 
 .list {
   grid-area: projects;
-  margin-top: desk(60px, 40px);
+  margin-top: 60px;
+
+  @include MEDIA($CONT_WIDTH) {
+    margin-top: adapt(60px, 40px);
+  }
 
   @include MEDIA($TAB_WIDTH) {
     margin-top: adapt(40px, 20px);

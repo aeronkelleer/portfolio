@@ -1,14 +1,15 @@
-@use '../../../styles/abstracts/' as *;
-
 // @======================== projects-hero ========================@ //
 
 .projects_hero {
-  padding-top: desk(120px);
-  min-height: calc(100dvh);
+  padding-top: 120px;
   padding-bottom: 0;
 }
 
 .heading {
+  margin-bottom: 60px;
   text-align: left;
-  margin-bottom: desk(60px, 14px);
+
+  @include MEDIA($CONT_WIDTH) {
+    margin-bottom: adapt(60px, 14px);
+  }
 }

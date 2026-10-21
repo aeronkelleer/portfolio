@@ -1,35 +1,49 @@
-@use '../../../styles/abstracts/' as *;
-
 // $======================== projects-list ========================$ //
 
 .projects_list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: desk(14px);
-  margin-bottom: desk(40px, 32px);
+  gap: 14px;
   justify-items: center;
+  margin-bottom: 40px;
 
-  @include MEDIA($DESK_WIDTH) {
+  @include MEDIA($CONT_WIDTH) {
+    margin-bottom: adapt(40px, 32px);
+  }
+
+  @include MEDIA($LAP_WIDTH) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include MEDIA($TAB_WIDTH) {
     grid-template-columns: repeat(2, 1fr);
   }
 
   &._detailed {
-    gap: desk(20px, 14px);
-    margin-bottom: desk(60px, 32px);
+    gap: 20px;
+    margin-bottom: 60px;
+
+    @include MEDIA($CONT_WIDTH) {
+      gap: adapt(20px, 14px);
+      margin-bottom: adapt(60px, 32px);
+    }
   }
 
   @include MEDIA($MID_WIDTH) {
     &:not(._detailed) {
       display: flex;
       width: 100vw;
-      height: calc(100dvh - adapt(350px, 150px));
       margin-inline: 0;
       position: relative;
-      left: calc(-1 * adapt(23px, 16px));
+      left: -23px;
       overflow: auto;
       justify-items: start;
       scroll-snap-type: x mandatory;
       @include hide-scrollbar;
+
+      @include MEDIA($CONT_WIDTH) {
+        left: calc(-1 * adapt(23px, 16px));
+      }
     }
   }
 

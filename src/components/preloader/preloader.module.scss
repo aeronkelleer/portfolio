@@ -16,12 +16,12 @@
 }
 
 .element {
-  width: desk(120px);
-  height: desk(120px);
+  width: 120px;
+  height: 120px;
   overflow: hidden;
   border-radius: 50%;
   color: #ffffff;
-  font-size: desk(120px);
+  font-size: 120px;
   transform: translateZ(0);
   animation: preloader 1500ms infinite ease;
 }

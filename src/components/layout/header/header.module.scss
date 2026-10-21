@@ -1,12 +1,10 @@
-@use '../../../styles/abstracts/' as *;
-
 // $======================== header ========================$ //
 
 .header {
-  width: calc(100% - desk(40px));
+  width: 100%;
   position: fixed;
   left: 50%;
-  top: desk(18px);
+  top: 18px;
   z-index: 10;
   translate: -50%;
 
@@ -20,19 +18,22 @@
 }
 
 .inner {
-  border-radius: desk(12px);
-  border: desk(1px) solid var(--secondary50);
   display: flex;
-  backdrop-filter: blur(desk(20px));
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  padding-inline: desk(16px);
-  padding-block: desk(10px);
+  padding-inline: 16px;
+  padding-block: 10px;
+  border: 1px solid var(--secondary50);
+  border-radius: 12px;
+  backdrop-filter: blur(20px);
 
   @include MEDIA($MID_WIDTH) {
     justify-content: flex-end;
     padding-block: adapt(10px, 6px);
+    width: fit-content;
+    margin-left: auto;
+    padding: 10px;
   }
 }
 

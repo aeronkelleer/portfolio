@@ -34,7 +34,7 @@ body {
 }
 
 .sections-wrapper {
-  margin-top: calc(-1 * desk(4px));
+  margin-top: -4px;
   color: #fff;
   box-shadow: 0 -80px 50px 50px #1e3040;
 
@@ -43,7 +43,11 @@ body {
 }
 
 section {
-  padding-block: desk(70px, 60px);
+  padding-block: 70px;
+
+  @include MEDIA($CONT_WIDTH) {
+    padding-block: adapt(70px, 60px);
+  }
 
   @include MEDIA($TAB_WIDTH) {
     padding-block: adapt(50px, 40px);

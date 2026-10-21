@@ -1,25 +1,32 @@
-@use '../../../styles/abstracts/' as *;
-
 // @======================== about-hero ========================@ //
 
 .about_hero {
-  padding-block: desk(60px);
-  min-height: calc(100dvh);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-height: calc(100dvh);
+  padding-block: 60px;
 }
 
 .heading {
+  margin-bottom: 20px;
   text-align: left;
-  margin-bottom: desk(20px, 14px);
+
+  @include MEDIA($CONT_WIDTH) {
+    margin-bottom: adapt(20px, 14px);
+  }
 }
 
 .content {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: desk(40px, 20px);
-  margin-bottom: desk(40px, 20px);
+  gap: 40px;
+  margin-bottom: 40px;
+
+  @include MEDIA($CONT_WIDTH) {
+    gap: adapt(40px, 20px);
+    margin-bottom: adapt(40px, 20px);
+  }
 
   @include MEDIA($MID_WIDTH) {
     grid-template-columns: auto;
@@ -38,7 +45,6 @@
     object-fit: cover;
 
     @include MEDIA($MID_WIDTH) {
-      // object-position: 0 10%;
       object-position: top;
     }
   }
@@ -47,11 +53,15 @@
 .text_box {
   display: flex;
   flex-direction: column;
-  gap: desk(8px, 8px);
   justify-content: space-between;
+  gap: 8px;
 }
 
 .text {
-  font-size: desk(18px, 16px);
+  font-size: 18px;
   line-height: 1.5;
+
+  @include MEDIA($CONT_WIDTH) {
+    font-size: adapt(18px, 16px);
+  }
 }

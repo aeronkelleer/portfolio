@@ -1,18 +1,16 @@
-@use '../../../styles/abstracts/' as *;
-
 // ^======================== main-button ========================^ //
 
 .main_button {
   display: inline-flex;
   align-items: center;
-  gap: desk(8px);
-  padding-inline: desk(20px);
-  padding-block: desk(14px);
+  gap: 8px;
+  padding-inline: 20px;
+  padding-block: 14px;
   position: relative;
-  border-radius: desk(16px);
-  box-shadow: inset 0 0 desk(5px) desk(1px) #ffffff6e;
+  border-radius: 16px;
+  box-shadow: inset 0 0 5px 1px #ffffff6e;
   color: var(--white);
-  font-size: desk(20px);
+  font-size: 20px;
   transition: all 250ms;
   overflow: clip;
 
@@ -33,7 +31,7 @@
     position: absolute;
     inset: 0;
     border-radius: inherit;
-    box-shadow: 0 0 desk(20px) desk(2px) var(--secondary50);
+    box-shadow: 0 0 20px 2px var(--secondary50);
     transition: opacity 250ms;
   }
 
@@ -47,12 +45,20 @@
 }
 
 .text {
-  font-size: desk(20px, 18px);
+  font-size: 20px;
+
+  @include MEDIA($CONT_WIDTH) {
+    font-size: adapt(20px, 18px);
+  }
 }
 
 .icon {
-  translate: 0 desk(1px, 1px);
-  @include square(desk(20px, 14px));
+  translate: 0 1px;
+  @include square(20px);
+
+  @include MEDIA($CONT_WIDTH) {
+    @include square(adapt(20px, 14px));
+  }
 }
 
 .blink {

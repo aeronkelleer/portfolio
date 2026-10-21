@@ -1,9 +1,8 @@
-@use '../../../styles/abstracts/' as *;
-
 .menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
   width: 100%;
   height: 100%;
 
@@ -19,7 +18,12 @@
   flex: 1 1 auto;
   display: flex;
   justify-content: space-between;
-  max-width: desk(600px, 270px);
+  gap: 10px;
+  max-width: 600px;
+
+  @include MEDIA($CONT_WIDTH) {
+    max-width: adapt(600px, 300px);
+  }
 
   @include MEDIA($MID_WIDTH) {
     flex: 0 1 auto;
@@ -31,9 +35,13 @@
 .menu_link {
   position: relative;
   color: var(--secondary);
-  font-size: desk(18px, 16px);
+  font-size: 18px;
   font-weight: 700;
   transition: all .3s;
+
+  @include MEDIA($CONT_WIDTH) {
+    font-size: adapt(18px, 16px);
+  }
 
   @include MEDIA($MID_WIDTH) {
     font-size: adapt(32px, 24px);
@@ -41,19 +49,19 @@
 
   &::after {
     content: attr(data-name);
-    opacity: 0;
+    width: 100%;
     position: absolute;
     left: 50%;
     top: 50%;
-    width: 100%;
-    translate: -50% -50%;
     z-index: 1;
+    opacity: 0;
     background-image: var(--orangeGradient);
     background-color: #fff;
+    translate: -50% -50%;
+    transition: opacity 250ms;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    transition: opacity 250ms;
   }
 
   &._active {

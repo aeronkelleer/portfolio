@@ -1,5 +1,3 @@
-@use '../../../styles/abstracts/' as *;
-
 .aside {
   display: none;
   position: fixed;
@@ -20,6 +18,6 @@
 .menu {
   flex-direction: column;
   justify-content: space-evenly;
-  backdrop-filter: blur(desk(24px));
+  backdrop-filter: blur(24px);
   transition: all .3s;
 }

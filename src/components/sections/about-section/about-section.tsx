@@ -1,7 +1,7 @@
 'use client';
 
+import Container from '@/components/layout/container/container';
 import Skills from '@/components/layout/skills/skills';
-import Container from '@/components/shared/container/container';
 import Heading from '@/components/ui/heading/heading';
 import MainButton from '@/components/ui/main-button/main-button';
 import { AppRoute, basePath } from '@/constants/const';

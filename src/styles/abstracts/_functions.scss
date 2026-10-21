@@ -106,11 +106,3 @@
 
   @return vw-max($max, $min, $ADAPT_WIDTH);
 }
-
-@function desk($max, $min: null) {
-  @if $min ==null {
-    @return vw-max($max, $max, $DESK_WIDTH);
-  }
-
-  @return vw-max($max, $min, $DESK_WIDTH);
-}

@@ -4,9 +4,9 @@
   min-height: 100dvh;
 
   &__inner {
-    padding-block: desk(50px);
-    min-height: 100dvh;
     display: grid;
     place-items: center;
+    min-height: 100dvh;
+    padding-block: 50px;
   }
 }

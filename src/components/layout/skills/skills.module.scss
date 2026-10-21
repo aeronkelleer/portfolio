@@ -1,11 +1,9 @@
-@use '../../../styles/abstracts/' as *;
-
 // @======================== skills ========================@ //
 
 .skills {
   &._expanded {
     .container {
-      gap: desk(40px, 40px);
+      gap: 40px;
     }
 
     .group {
@@ -14,7 +12,11 @@
     }
 
     .group-title {
-      font-size: desk(24px, 20px);
+      font-size: 24px;
+
+      @include MEDIA($CONT_WIDTH) {
+        font-size: adapt(24px, 20px);
+      }
     }
 
     .list {
@@ -25,8 +27,12 @@
 }
 
 .heading {
-  margin-bottom: desk(32px, 28px);
+  margin-bottom: 32px;
   text-align: left;
+
+  @include MEDIA($CONT_WIDTH) {
+    margin-bottom: adapt(32px, 28px);
+  }
 
   @include MEDIA($TAB_WIDTH) {
     margin-bottom: adapt(28px, 20px);
@@ -37,8 +43,12 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  gap: desk(40px, 32px);
+  gap: 40px;
   padding-inline: 0;
+
+  @include MEDIA($CONT_WIDTH) {
+    gap: adapt(40px, 32px);
+  }
 
   @include MEDIA($TAB_WIDTH) {
     gap: adapt(32px, 20px);
@@ -48,9 +58,13 @@
 .group {
   display: flex;
   align-items: center;
-  line-height: 1.2;
-  gap: desk(18px, 16px);
   flex-wrap: wrap;
+  gap: 18px;
+  line-height: 1.2;
+
+  @include MEDIA($CONT_WIDTH) {
+    gap: adapt(18px, 16px);
+  }
 
   @include MEDIA($TAB_WIDTH) {
     gap: adapt(16px, 12px);
@@ -58,10 +72,14 @@
 }
 
 .group_title {
-  margin-right: 2.3dvh;
+  margin-right: 18px;
+  font-size: 20px;
   font-weight: 700;
   letter-spacing: .1dvh;
-  font-size: desk(20px, 18px);
+
+  @include MEDIA($CONT_WIDTH) {
+    font-size: adapt(20px, 18px);
+  }
 
   @include MEDIA($TAB_WIDTH) {
     font-size: adapt(18px, 16px);
@@ -71,7 +89,11 @@
 .list {
   display: flex;
   flex-wrap: wrap;
-  gap: desk(20px, 16px);
+  gap: 20px;
+
+  @include MEDIA($CONT_WIDTH) {
+    gap: adapt(20px, 16px);
+  }
 
   @include MEDIA($TAB_WIDTH) {
     gap: adapt(16px, 12px);

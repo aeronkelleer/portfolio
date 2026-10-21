@@ -6,11 +6,12 @@ import { Metadata } from 'next';
 // #======================== WorksPage ========================# //
 
 export const metadata: Metadata = {
-  title: 'Portfolio - Works',
+  title: 'Portfolio - Projects',
 };
 
 export default function Page(): React.JSX.Element {
   const normalizedProjectsData = convertKeysToCamelCase(projectsData);
+  
   return (
     <main>
       <ProjectsHero projects={normalizedProjectsData} />

@@ -1,5 +1,3 @@
-@use '../../../styles/abstracts/' as *;
-
 // @======================== hero-section ========================@ //
 
 .section {
@@ -7,7 +5,7 @@
   flex-direction: column;
   justify-content: center;
   min-height: 100dvh;
-  padding-block: desk(20px);
+  padding-block: 20px;
   position: relative;
   z-index: 0;
   background-repeat: no-repeat;
@@ -24,9 +22,9 @@
   img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    opacity: 0.8;
     z-index: -1;
+    opacity: 0.8;
+    object-fit: cover;
   }
 }
 
@@ -35,8 +33,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: desk(20px);
-  width: 90vw;
+  gap: 20px;
+  width: 100%;
 
   @include MEDIA($MID_WIDTH) {
     flex-direction: column;
@@ -49,7 +47,11 @@
   flex-grow: 0;
   flex-shrink: 0;
   width: 100%;
-  max-width: desk(670px, 470px);
+  max-width: 670px;
+
+  @include MEDIA($CONT_WIDTH) {
+    max-width: adapt(670px, 470px);
+  }
 
   @include MEDIA($TAB_WIDTH) {
     max-width: adapt(470px, 170px);
@@ -65,7 +67,7 @@
 
 .heading {
   align-self: flex-start;
-  margin-bottom: desk(10px);
+  margin-bottom: 10px;
   text-align: left;
 
   @include MEDIA($MID_WIDTH) {
@@ -75,10 +77,14 @@
 }
 
 .text {
-  margin-bottom: desk(50px);
-  font-size: desk(24px, 24px);
-  scale: 1 1.2;
+  margin-bottom: 50px;
+  font-size: 24px;
   text-wrap: balance;
+  scale: 1 1.2;
+
+  @include MEDIA($CONT_WIDTH) {
+    font-size: adapt(24px, 22px);
+  }
 
   @include MEDIA($TAB_WIDTH) {
     margin-bottom: adapt(50px, 20px);
@@ -92,23 +98,28 @@
 
 .button_box {
   display: flex;
-  gap: desk(18px);
+  gap: 18px;
 }
 
 .button {
   align-self: flex-start;
 
-  @include MEDIA($TAB_WIDTH) {
-    p {
+  p {
+    @include MEDIA($TAB_WIDTH) {
       font-size: adapt(18px, 14px) !important;
     }
   }
 }
 
 .image_box {
-  width: desk(580px, 580px);
+  flex-shrink: 0;
+  width: 580px;
   height: auto;
   position: relative;
+
+  @include MEDIA($CONT_WIDTH) {
+    width: adapt(580px, 580px);
+  }
 
   @include MEDIA($MID_WIDTH) {
     width: adapt(340px, 270px);
@@ -116,7 +127,7 @@
 }
 
 .image {
-  filter: drop-shadow(0 0 desk(10px) desk(10px) #fff);
+  filter: drop-shadow(0 0 10px 10px #fff);
   @include square(100%);
 }
 
@@ -124,14 +135,21 @@
   aspect-ratio: 1;
   position: absolute;
   border-radius: 50%;
-  box-shadow: inset 0 0 desk(30px, 20px) desk(2px, 1px) var(--white50);
-  background-image: radial-gradient(#ff7418, var(--lightOrange));
+  box-shadow: inset -10px -10px 25px rgba(0, 0, 0, 0.5),
+    10px 10px 20px rgba(0, 0, 0, 0.3);
+  background: radial-gradient(circle at 30% 30%, #ffab5c, #9e4700 60%, #572e00 100%);
 
   &._top {
-    width: desk(100px, 70px);
-    left: desk(200px, 140px);
-    top: desk(130px, 130px);
-    animation: floating 2s ease-in-out infinite alternate;
+    width: 100px;
+    left: 200px;
+    top: 130px;
+    animation: floating 3s ease-in-out infinite alternate;
+
+    @include MEDIA($CONT_WIDTH) {
+      width: adapt(100px, 70px);
+      left: adapt(200px, 140px);
+      top: adapt(130px, 130px);
+    }
 
     @include MEDIA($MID_WIDTH) {
       left: adapt(80px, 50px);
@@ -140,10 +158,16 @@
   }
 
   &._bottom {
-    width: desk(60px, 40px);
-    left: desk(630px, 290px);
-    bottom: desk(200px, 70px);
+    width: 60px;
+    right: 530px;
+    bottom: 150px;
     animation: floating 1s ease-in-out infinite alternate;
+
+    @include MEDIA($CONT_WIDTH) {
+      width: adapt(60px, 40px);
+      right: adapt(530px, 290px);
+      bottom: adapt(150px, 70px);
+    }
 
     @include MEDIA($MID_WIDTH) {
       left: auto;

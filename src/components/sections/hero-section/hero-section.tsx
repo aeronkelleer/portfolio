@@ -1,10 +1,10 @@
 'use client';
 
-import Container from '@/components/shared/container/container';
+import Container from '@/components/layout/container/container';
 import Picture from '@/components/shared/picture/picture';
 import Background from '@/components/ui/background/background';
+import Heading from '@/components/ui/heading/heading';
 import MainButton from '@/components/ui/main-button/main-button';
-import MainHeading from '@/components/ui/main-heading/main-heading';
 import { AppRoute, basePath, Ext } from '@/constants/const';
 import { useMouseMove } from '@/hooks/use-mouse-move';
 import { gsap, useGSAP } from '@/lib/gsap';
@@ -53,15 +53,19 @@ export default function HeroSection(props: HeroSectionProps) {
         xPercent: -25,
         opacity: 0,
       })
+      .from(refs.button_projects.current, {
+        xPercent: -25,
+        opacity: 0,
+      })
       .from(refs.button_cv.current, {
         xPercent: -25,
         opacity: 0,
       })
       .from(refs.image.current, {
-        scale: 0.98,
+        scale: 0.99,
         opacity: 0,
         xPercent: 2,
-      })
+      }, '<')
       .from(refs.circles[0].current, {
         scale: 0.5,
         opacity: 0,
@@ -91,9 +95,9 @@ export default function HeroSection(props: HeroSectionProps) {
       <Container>
         <div className={s.inner}>
           <div className={s.info}>
-            <MainHeading className={s.heading} ref={refs.heading}>
+            <Heading className={s.heading} ref={refs.heading} type='main'>
               {heading}
-            </MainHeading>
+            </Heading>
             <div className={s.text_box} ref={refs.text}>
               {splitTextToParagraphs(text).map((item, index) => (
                 <p key={index} className={s.text}>
