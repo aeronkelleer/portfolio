@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
   },
   sassOptions: {
     loadPaths: [path.join(__dirname, 'src/styles').replace(/\\/g, '/')],
-    prependData: `@use 'abstracts' as *;`,
+    additionalData: `@use 'abstracts' as *;`,
   },
 };
 
