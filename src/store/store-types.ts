@@ -1,3 +1,4 @@
+import { Language } from '@/types/types';
 import type { AxiosInstance } from 'axios';
 import type { store } from './store';
 
@@ -16,7 +17,11 @@ export type AsyncThunkType = {
   extra: AxiosInstance;
 };
 
-// %------------------------ processes ------------------------% //
-export type OpenElementsProcess = {
+// %------------------------ slices ------------------------% //
+export type OpenElementsSlice = {
   openElements: (string | null)[];
+};
+
+export type LanguageSlice = {
+  currentLanguage: Language;
 };

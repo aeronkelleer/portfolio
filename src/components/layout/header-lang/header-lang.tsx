@@ -1,14 +1,27 @@
-import { basePath } from '@/constants/const';
+'use client';
+
+import { basePath, LANGUAGES } from '@/constants/const';
+import { changeLanguage, getCurrentLanguage } from '@/store/processes/language.slice';
+import { useAppDispatch, useAppSelector } from '@/store/store-hooks';
+import { Language } from '@/types/types';
+import Image from 'next/image';
+import { usePathname, useRouter } from 'next/navigation';
 import s from './header-lang.module.scss';
 
-// ^======================== HeaderLang ========================^ //
+export default function HeaderLang(): React.JSX.Element {
+  const currentLanguage = useAppSelector(getCurrentLanguage);
+  const otherLanguages = LANGUAGES.filter((lang) => lang.prefix !== currentLanguage.prefix);
+  const dispatch = useAppDispatch();
+  const router = useRouter();
+  const pathname = usePathname();
 
-import Image from 'next/image';
+  const handleButtonClick = (lang: Language) => {
+    dispatch(changeLanguage(lang));
 
-function HeaderLang(): React.JSX.Element {
+    const segments = pathname.split('/');
+    segments[1] = lang.prefix;
 
-  const handleButtonClick = () => {
-
+    router.push(segments.join('/'));
   };
 
   return (
@@ -16,30 +29,27 @@ function HeaderLang(): React.JSX.Element {
       <div className={s.selected}>
         <div className={s.icon}>
           <Image
-            src={`${basePath}/img/icons/eng.svg`}
+            src={`${basePath}/img/icons/${currentLanguage.prefix}.svg`}
             width={45}
             height={45}
-            alt='english'
+            alt={currentLanguage.name}
           />
         </div>
-        <div className={s.name}>EN</div>
+        <div className={s.name}>{currentLanguage.prefix.toUpperCase()}</div>
       </div>
+
       <div className={s.dropdown}>
-        <div className={s.dropdown_item}>
-          <button type='button' className={s.dropdown_link} onClick={handleButtonClick}>
-            <div className={s.icon}>
-              <Image
-                src={`${basePath}/img/icons/rus.svg`}
-                width={45}
-                height={45}
-                alt='russian'
-              />
-            </div>
-            <div className={s.dropdown_name}>RU</div>
-          </button>
-        </div>
+        {otherLanguages.map((lang) => (
+          <div key={lang.prefix} className={s.dropdown_item}>
+            <button type='button' className={s.dropdown_link} onClick={() => handleButtonClick(lang)}>
+              <div className={s.icon}>
+                <Image src={`${basePath}/img/icons/${lang.prefix}.svg`} width={45} height={45} alt={lang.name} />
+              </div>
+              <div className={s.dropdown_name}>{lang.prefix.toUpperCase()}</div>
+            </button>
+          </div>
+        ))}
       </div>
     </div>
   );
 }
-export default HeaderLang;

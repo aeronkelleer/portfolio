@@ -96,11 +96,11 @@
       "skills_items": [
         {
           "skillName": "Russian (Native)",
-          "skillIcon": "/img/icons/rus.svg"
+          "skillIcon": "/img/icons/ru.svg"
         },
         {
           "skillName": "English (B2)",
-          "skillIcon": "/img/icons/eng.svg"
+          "skillIcon": "/img/icons/en.svg"
         },
         {
           "skillName": "German (A2)",
@@ -250,12 +250,12 @@
       "skills_items": [
         {
           "skillName": "Russian (Native)",
-          "skillIcon": "/img/icons/rus.svg",
+          "skillIcon": "/img/icons/ru.svg",
           "skillDescription": "Russian is my native language."
         },
         {
           "skillName": "English (B2)",
-          "skillIcon": "/img/icons/eng.svg",
+          "skillIcon": "/img/icons/en.svg",
           "skillDescription": "I can read technical documentation and communicate about development topics in English."
         },
         {

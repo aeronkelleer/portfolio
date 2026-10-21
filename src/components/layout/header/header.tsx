@@ -2,7 +2,7 @@
 import { OpenElement } from '@/constants/const';
 import { MediaQuery } from '@/constants/viewport';
 import { useMediaQuery } from '@/hooks/use-media-query';
-import { addOpenElement, dropOpenElement, getOpenElements } from '@/store/processes/open-element.process';
+import { addOpenElement, dropOpenElement, getOpenElements } from '@/store/processes/open-element.slice';
 import { useAppDispatch, useAppSelector } from '@/store/store-hooks';
 import clsx from 'clsx';
 import React from 'react';

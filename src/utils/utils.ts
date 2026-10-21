@@ -44,3 +44,21 @@ export const convertKeysToCamelCase = (() => {
 
   return convert;
 })();
+
+export const getLocalizedData = async <T>({
+  name,
+  language,
+}: {
+  name: string;
+  language: 'en' | 'ru';
+}): Promise<T | null> => {
+  const response = await fetch(`/data/${name}-${language}.json`);
+
+  if (!response.ok) {
+    throw new Error(`Failed to fetch localized data: ${name}-${language}`);
+  }
+
+  const json: unknown = await response.json();
+
+  return convertKeysToCamelCase(json) as T;
+};

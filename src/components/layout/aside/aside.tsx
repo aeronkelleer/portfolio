@@ -1,7 +1,7 @@
 'use client';
 
 import { OpenElement } from '@/constants/const';
-import { getOpenElements } from '@/store/processes/open-element.process';
+import { getOpenElements } from '@/store/processes/open-element.slice';
 import { useAppSelector } from '@/store/store-hooks';
 import clsx from 'clsx';
 import Menu from '../menu/menu';

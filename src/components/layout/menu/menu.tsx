@@ -2,7 +2,7 @@
 
 import { HEADER_MENU_ITEMS, OpenElement } from '@/constants/const';
 import { useTransitionLink } from '@/hooks/use-transition-link';
-import { dropOpenElement } from '@/store/processes/open-element.process';
+import { dropOpenElement } from '@/store/processes/open-element.slice';
 import { useAppDispatch } from '@/store/store-hooks';
 import clsx from 'clsx';
 import Link from 'next/link';
@@ -18,7 +18,6 @@ type MenuProps = {
 };
 
 function Menu(menuProps: MenuProps): React.JSX.Element {
-
   const { className } = menuProps;
 
   const { handleTransition } = useTransitionLink();
@@ -39,10 +38,7 @@ function Menu(menuProps: MenuProps): React.JSX.Element {
               <Link
                 href={link}
                 data-name={name}
-                className={clsx(
-                  s.menu_link,
-                  { [s._active]: pathname === link }
-                )}
+                className={clsx(s.menu_link, { [s._active]: pathname === link })}
                 onClick={(e) => {
                   onHeaderLinkClick();
                   if (name !== 'Contact') {
@@ -50,9 +46,7 @@ function Menu(menuProps: MenuProps): React.JSX.Element {
                   }
                 }}
               >
-                <p className={s.link_text}>
-                  {name}
-                </p>
+                <p className={s.link_text}>{name}</p>
               </Link>
             </li>
           );

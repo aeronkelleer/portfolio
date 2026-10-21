@@ -30,3 +30,18 @@ export type Contact = {
   icon: string;
   text: string;
 };
+
+export type Language = {
+  name: string;
+  prefix: string;
+};
+
+export interface HeroSectionData {
+  heading: string;
+  text: string;
+}
+
+export interface AboutSectionData {
+  text: string;
+  skills: SkillType[];
+}

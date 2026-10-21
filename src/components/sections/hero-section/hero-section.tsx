@@ -8,6 +8,7 @@ import MainButton from '@/components/ui/main-button/main-button';
 import { AppRoute, basePath, Ext } from '@/constants/const';
 import { useMouseMove } from '@/hooks/use-mouse-move';
 import { gsap, useGSAP } from '@/lib/gsap';
+import { HeroSectionData } from '@/types/types';
 import { splitTextToParagraphs } from '@/utils/utils';
 import clsx from 'clsx';
 import Image from 'next/image';
@@ -61,11 +62,15 @@ export default function HeroSection(props: HeroSectionProps) {
         xPercent: -25,
         opacity: 0,
       })
-      .from(refs.image.current, {
-        scale: 0.99,
-        opacity: 0,
-        xPercent: 2,
-      }, '<')
+      .from(
+        refs.image.current,
+        {
+          scale: 0.99,
+          opacity: 0,
+          xPercent: 2,
+        },
+        '<',
+      )
       .from(refs.circles[0].current, {
         scale: 0.5,
         opacity: 0,

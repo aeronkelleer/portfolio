@@ -1,3 +1,5 @@
+import { Language } from '@/types/types';
+
 export const basePath = process.env.NODE_ENV === 'production' ? '/portfolio' : '';
 
 export enum AppRoute {
@@ -27,8 +29,20 @@ export const HEADER_MENU_ITEMS = [
 
 export const PAGE_TRANSITION_TIME = 180;
 
+export const LANGUAGES: Language[] = [
+  {
+    name: 'English',
+    prefix: 'en',
+  },
+  {
+    name: 'Russian',
+    prefix: 'ru',
+  },
+];
+
 export enum NameSpace {
   OPEN_ELEMENTS = 'OPEN_ELEMENTS',
+  LANGUAGE = 'LANGUAGE',
 }
 
 export enum OpenElement {

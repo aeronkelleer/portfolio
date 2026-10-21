@@ -12,11 +12,13 @@ import s from './projects-section.module.scss';
 // @======================== ProjectsSection ========================@ //
 
 interface ProjectsSectionProps {
-  projects: Project[];
+  projects: Project[] | null;
 }
 
-export default function ProjectsSection(props: ProjectsSectionProps): React.JSX.Element {
+export default function ProjectsSection(props: ProjectsSectionProps) {
   const { projects } = props;
+
+  if (!projects) return;
 
   const projectsList = projects.slice(0, 4);
   const { handleTransition } = useTransitionLink();

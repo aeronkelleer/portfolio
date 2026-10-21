@@ -1,14 +1,14 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
 import { NameSpace } from '../../constants/const';
-import type { OpenElementsProcess } from '../store-types';
+import type { OpenElementsSlice } from '../store-types';
 
 // %======================== openElementProcess ========================% //
 
-const initialState: OpenElementsProcess = {
+const initialState: OpenElementsSlice = {
   openElements: [],
 };
 
-export const openElementProcess = createSlice({
+export const openElementSlice = createSlice({
   name: NameSpace.OPEN_ELEMENTS,
   initialState,
   reducers: {
@@ -34,6 +34,6 @@ export const openElementProcess = createSlice({
 export const {
   addOpenElement,
   dropOpenElement,
-} = openElementProcess.actions;
+} = openElementSlice.actions;
 
-export const { getOpenElements } = openElementProcess.selectors;
+export const { getOpenElements } = openElementSlice.selectors;
