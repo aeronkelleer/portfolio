@@ -11,19 +11,19 @@ export enum AppRoute {
 export const HEADER_MENU_ITEMS = [
   {
     link: AppRoute.MAIN,
-    name: 'Home',
+    name: { en: 'Home', ru: 'Главная' },
   },
   {
     link: AppRoute.ABOUT,
-    name: 'About me',
+    name: { en: 'About me', ru: 'О себе' },
   },
   {
     link: AppRoute.PROJECTS,
-    name: 'My projects',
+    name: { en: 'My projects', ru: 'Мои проекты' },
   },
   {
     link: '#contact',
-    name: 'Contact',
+    name: { en: 'Contact', ru: 'Контакты' },
   },
 ];
 

@@ -11,26 +11,22 @@ type MainButtonProps = {
   text: string;
   iconPath: string;
   color?: 'orange' | 'gray';
+  download?: boolean;
   onMainButtonClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 };
 
 function MainButton(mainButtonProps: MainButtonProps): React.JSX.Element {
-  const { className, href, text, iconPath, color = 'orange', onMainButtonClick } = mainButtonProps;
+  const { className, href, text, iconPath, color = 'orange', download, onMainButtonClick } = mainButtonProps;
   return (
     <Link
       className={clsx(className, s.main_button, s[`_${color}`])}
       href={href}
       onClick={onMainButtonClick}
+      download={download}
     >
       <div className={s.blink} />
       <p className={s.text}>{text}</p>
-      <Image
-        className={s.icon}
-        src={iconPath}
-        width={10}
-        height={10}
-        alt=''
-      />
+      <Image className={s.icon} src={iconPath} width={10} height={10} alt='' />
     </Link>
   );
 }

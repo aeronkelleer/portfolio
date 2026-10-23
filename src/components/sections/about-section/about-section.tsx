@@ -7,7 +7,9 @@ import MainButton from '@/components/ui/main-button/main-button';
 import { AppRoute, basePath } from '@/constants/const';
 import { useTransitionLink } from '@/hooks/use-transition-link';
 import { gsap, useGSAP } from '@/lib/gsap';
-import { SkillType } from '@/types/types';
+import { getCurrentLanguage } from '@/store/processes/language.slice';
+import { useAppSelector } from '@/store/store-hooks';
+import { MultiLangString, SkillType } from '@/types/types';
 import { splitTextToParagraphs } from '@/utils/utils';
 import { useRef } from 'react';
 import s from './about-section.module.scss';
@@ -15,7 +17,7 @@ import s from './about-section.module.scss';
 // @======================== AboutSection ========================@ //
 
 interface AboutSectionProps {
-  text: string;
+  text: MultiLangString;
   skills: SkillType[];
 }
 
@@ -57,6 +59,9 @@ export default function AboutSection(props: AboutSectionProps) {
 
   const { handleTransition } = useTransitionLink();
 
+  const currentLanguage = useAppSelector(getCurrentLanguage);
+  const lang = currentLanguage.prefix;
+
   return (
     <section className={s.section} id='about' ref={refs.section}>
       <Container>
@@ -64,10 +69,10 @@ export default function AboutSection(props: AboutSectionProps) {
           <div className={s.header}>
             <div className={s.info}>
               <Heading className={s.heading} ref={refs.heading}>
-                About me
+                {lang === 'en' ? 'About me' : 'О себе'}
               </Heading>
               <div className={s.text_box} ref={refs.textBox}>
-                {splitTextToParagraphs(text).map((paragraph, index) => (
+                {splitTextToParagraphs(text[lang]).map((paragraph, index) => (
                   <p key={index} className={s.text}>
                     {paragraph}
                   </p>
@@ -80,7 +85,7 @@ export default function AboutSection(props: AboutSectionProps) {
             <MainButton
               className={s.button}
               href={AppRoute.ABOUT}
-              text='Learn more'
+              text={lang === 'en' ? 'Learn more' : 'Узнать больше'}
               iconPath={`${basePath}/img/icons/go-to-arrow.svg`}
               onMainButtonClick={(e) => {
                 handleTransition(e, AppRoute.ABOUT);

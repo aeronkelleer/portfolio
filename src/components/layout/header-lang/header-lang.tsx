@@ -5,23 +5,15 @@ import { changeLanguage, getCurrentLanguage } from '@/store/processes/language.s
 import { useAppDispatch, useAppSelector } from '@/store/store-hooks';
 import { Language } from '@/types/types';
 import Image from 'next/image';
-import { usePathname, useRouter } from 'next/navigation';
 import s from './header-lang.module.scss';
 
 export default function HeaderLang(): React.JSX.Element {
   const currentLanguage = useAppSelector(getCurrentLanguage);
   const otherLanguages = LANGUAGES.filter((lang) => lang.prefix !== currentLanguage.prefix);
   const dispatch = useAppDispatch();
-  const router = useRouter();
-  const pathname = usePathname();
 
   const handleButtonClick = (lang: Language) => {
     dispatch(changeLanguage(lang));
-
-    const segments = pathname.split('/');
-    segments[1] = lang.prefix;
-
-    router.push(segments.join('/'));
   };
 
   return (

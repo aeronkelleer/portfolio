@@ -1,12 +1,12 @@
 export type SkillType = {
-  skillsGroupTitle: string;
+  skillsGroupTitle: MultiLangString;
   skillsItems: SkillItem[];
 };
 
 export type SkillItem = {
-  skillName: string;
+  skillName: string | MultiLangString;
   skillIcon: string;
-  skillDescription?: string;
+  skillDescription?: string | MultiLangString;
 };
 
 export type Project = {
@@ -17,8 +17,12 @@ export type Project = {
   fullDesc: string;
   technologies: string[];
   imgSrc: string;
-  gifSrc?: string;
-  gifMobSrc?: string;
+};
+
+export type LocalizedProject = Omit<Project, 'title' | 'desc' | 'fullDesc'> & {
+  title: string | MultiLangString;
+  desc: string | MultiLangString;
+  fullDesc: string | MultiLangString;
 };
 
 export type Certificate = {
@@ -33,7 +37,7 @@ export type Contact = {
 
 export type Language = {
   name: string;
-  prefix: string;
+  prefix: 'en' | 'ru';
 };
 
 export interface HeroSectionData {
@@ -44,4 +48,9 @@ export interface HeroSectionData {
 export interface AboutSectionData {
   text: string;
   skills: SkillType[];
+}
+
+export interface MultiLangString {
+  en: string;
+  ru: string;
 }

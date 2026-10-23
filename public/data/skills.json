@@ -1,7 +1,10 @@
 {
   "concise": [
     {
-      "skills_group_title": "Technologies:",
+      "skills_group_title": {
+        "en": "Technologies:",
+        "ru": "Технологии:"
+      },
       "skills_items": [
         {
           "skillName": "JavaScript",
@@ -30,7 +33,10 @@
       ]
     },
     {
-      "skills_group_title": "Libraries & Tools:",
+      "skills_group_title": {
+        "en": "Libraries & Tools:",
+        "ru": "Библиотеки и инструменты:"
+      },
       "skills_items": [
         {
           "skillName": "Redux Toolkit",
@@ -67,7 +73,10 @@
       ]
     },
     {
-      "skills_group_title": "Competencies:",
+      "skills_group_title": {
+        "en": "Competencies:",
+        "ru": "Компетенции:"
+      },
       "skills_items": [
         {
           "skillName": "REST API Integration",
@@ -92,18 +101,30 @@
       ]
     },
     {
-      "skills_group_title": "Languages:",
+      "skills_group_title": {
+        "en": "Languages:",
+        "ru": "Языки:"
+      },
       "skills_items": [
         {
-          "skillName": "Russian (Native)",
+          "skillName": {
+            "en": "Russian (Native)",
+            "ru": "Русский (родной)"
+          },
           "skillIcon": "/img/icons/ru.svg"
         },
         {
-          "skillName": "English (B2)",
+          "skillName": {
+            "en": "English (B2)",
+            "ru": "Английский (B2)"
+          },
           "skillIcon": "/img/icons/en.svg"
         },
         {
-          "skillName": "German (A2)",
+          "skillName": {
+            "en": "German (A2)",
+            "ru": "Немецкий (A2)"
+          },
           "skillIcon": "/img/icons/ger.svg"
         }
       ]
@@ -111,157 +132,259 @@
   ],
   "expanded": [
     {
-      "skills_group_title": "Technologies:",
+      "skills_group_title": {
+        "en": "Technologies:",
+        "ru": "Технологии:"
+      },
       "skills_items": [
         {
           "skillName": "JavaScript",
           "skillIcon": "/img/icons/js-icon.svg",
-          "skillDescription": "I use JavaScript to implement interactive behavior, handle asynchronous operations, and build dynamic web interfaces."
+          "skillDescription": {
+            "en": "I use JavaScript to implement interactive behavior, handle asynchronous operations, and build dynamic web interfaces.",
+            "ru": "Использую JavaScript для реализации интерактивного поведения, работы с асинхронными операциями и создания динамических веб-интерфейсов."
+          }
         },
         {
           "skillName": "TypeScript",
           "skillIcon": "/img/icons/ts-icon.svg",
-          "skillDescription": "I use TypeScript across my React and Next.js projects to define data structures, type component props, and make application code more predictable and maintainable."
+          "skillDescription": {
+            "en": "I use TypeScript across my React and Next.js projects to define data structures, type component props, and make application code more predictable and maintainable.",
+            "ru": "Использую TypeScript в проектах на React и Next.js для описания структур данных, типизации пропсов компонентов и повышения предсказуемости и поддерживаемости кода."
+          }
         },
         {
           "skillName": "React",
           "skillIcon": "/img/icons/react-icon.svg",
-          "skillDescription": "I build reusable React components and interactive interfaces, organizing UI logic into maintainable components and custom hooks."
+          "skillDescription": {
+            "en": "I build reusable React components and interactive interfaces, organizing UI logic into maintainable components and custom hooks.",
+            "ru": "Создаю переиспользуемые компоненты React и интерактивные интерфейсы, организуя логику UI с помощью поддерживаемых компонентов и пользовательских хуков."
+          }
         },
         {
           "skillName": "Next.js",
           "skillIcon": "/img/icons/next-icon.svg",
-          "skillDescription": "I develop multi-page websites with Next.js, using server-side rendering, dynamic routing, and API integrations to deliver production-ready websites."
+          "skillDescription": {
+            "en": "I develop multi-page websites with Next.js, using server-side rendering, dynamic routing, and API integrations to deliver production-ready websites.",
+            "ru": "Разрабатываю многостраничные сайты на Next.js, используя серверный рендеринг, динамическую маршрутизацию и интеграцию с API для создания готовых к production решений."
+          }
         },
         {
           "skillName": "HTML5",
           "skillIcon": "/img/icons/html-icon.svg",
-          "skillDescription": "I write semantic HTML to create accessible, well-structured page layouts and interfaces."
+          "skillDescription": {
+            "en": "I write semantic HTML to create accessible, well-structured page layouts and interfaces.",
+            "ru": "Использую семантический HTML для создания доступных интерфейсов и страниц с хорошо организованной структурой."
+          }
         },
         {
           "skillName": "CSS3 / SCSS Modules",
           "skillIcon": "/img/icons/scss-icon.svg",
-          "skillDescription": "I use SCSS Modules to build responsive layouts, organize styles, and keep component styles isolated and maintainable."
+          "skillDescription": {
+            "en": "I use SCSS Modules to build responsive layouts, organize styles, and keep component styles isolated and maintainable.",
+            "ru": "Использую SCSS Modules для создания адаптивных макетов, организации стилей и изоляции стилей компонентов, упрощая их поддержку."
+          }
         }
       ]
     },
     {
-      "skills_group_title": "State Management & Validation:",
+      "skills_group_title": {
+        "en": "State Management & Validation:",
+        "ru": "Управление состоянием и валидация:"
+      },
       "skills_items": [
         {
           "skillName": "Redux Toolkit",
           "skillIcon": "/img/icons/rtk-icon.svg",
-          "skillDescription": "I use Redux Toolkit and React Redux to manage shared application state, including modal windows, user account features, and asynchronous workflows."
+          "skillDescription": {
+            "en": "I use Redux Toolkit and React Redux to manage shared application state, including modal windows, user account features, and asynchronous workflows.",
+            "ru": "Использую Redux Toolkit и React Redux для управления общим состоянием приложения, включая модальные окна, функциональность личного кабинета и асинхронные процессы."
+          }
         },
         {
           "skillName": "Zod",
           "skillIcon": "/img/icons/zod-icon.svg",
-          "skillDescription": "I use Zod to define validation schemas and validate form data with clear, reusable rules."
+          "skillDescription": {
+            "en": "I use Zod to define validation schemas and validate form data with clear, reusable rules.",
+            "ru": "Использую Zod для описания схем валидации и проверки данных форм с помощью понятных и переиспользуемых правил."
+          }
         }
       ]
     },
     {
-      "skills_group_title": "UI, Animation & Visualization:",
+      "skills_group_title": {
+        "en": "UI, Animation & Visualization:",
+        "ru": "Интерфейсы, анимация и визуализация:"
+      },
       "skills_items": [
         {
           "skillName": "GSAP",
           "skillIcon": "/img/icons/gsap-icon.svg",
-          "skillDescription": "I use GSAP and ScrollTrigger to create scroll-based animations and interactive UI effects."
+          "skillDescription": {
+            "en": "I use GSAP and ScrollTrigger to create scroll-based animations and interactive UI effects.",
+            "ru": "Использую GSAP и ScrollTrigger для создания анимаций, реагирующих на прокрутку страницы, и интерактивных эффектов интерфейса."
+          }
         },
         {
           "skillName": "Three.js",
           "skillIcon": "/img/icons/threejs-icon.svg",
-          "skillDescription": "I have used Three.js and custom shaders to create interactive WebGL effects, including a particle-based 3D logo."
+          "skillDescription": {
+            "en": "I have used Three.js and custom shaders to create interactive WebGL effects, including a particle-based 3D logo.",
+            "ru": "Использовал Three.js и собственные шейдеры для создания интерактивных WebGL-эффектов, включая трёхмерный логотип из частиц."
+          }
         },
         {
           "skillName": "Splide",
           "skillIcon": "/img/icons/splide-icon.svg",
-          "skillDescription": "I use Splide with React to build responsive carousels and sliders with touch support and configurable behavior."
+          "skillDescription": {
+            "en": "I use Splide with React to build responsive carousels and sliders with touch support and configurable behavior.",
+            "ru": "Использую Splide с React для создания адаптивных каруселей и слайдеров с поддержкой сенсорного управления и настраиваемым поведением."
+          }
         }
       ]
     },
     {
-      "skills_group_title": "Build Tools & Code Quality:",
+      "skills_group_title": {
+        "en": "Build Tools & Code Quality:",
+        "ru": "Инструменты сборки и качество кода:"
+      },
       "skills_items": [
         {
           "skillName": "Vite",
           "skillIcon": "/img/icons/vite-icon.svg",
-          "skillDescription": "I use Vite to develop and build React applications, benefiting from fast startup and an efficient development workflow."
+          "skillDescription": {
+            "en": "I use Vite to develop and build React applications, benefiting from fast startup and an efficient development workflow.",
+            "ru": "Использую Vite для разработки и сборки React-приложений, благодаря быстрому запуску и эффективному процессу разработки."
+          }
         },
         {
           "skillName": "ESLint",
           "skillIcon": "/img/icons/eslint-icon.svg",
-          "skillDescription": "I use ESLint to identify potential issues and maintain consistent code quality."
+          "skillDescription": {
+            "en": "I use ESLint to identify potential issues and maintain consistent code quality.",
+            "ru": "Использую ESLint для выявления потенциальных проблем и поддержания единых стандартов качества кода."
+          }
         }
       ]
     },
     {
-      "skills_group_title": "Version Control & Collaboration:",
+      "skills_group_title": {
+        "en": "Version Control & Collaboration:",
+        "ru": "Контроль версий и совместная работа:"
+      },
       "skills_items": [
         {
           "skillName": "Git",
           "skillIcon": "/img/icons/git-icon.svg",
-          "skillDescription": "I use Git to track changes, manage commits, and work with branches in project development."
+          "skillDescription": {
+            "en": "I use Git to track changes, manage commits, and work with branches in project development.",
+            "ru": "Использую Git для отслеживания изменений, управления коммитами и работы с ветками при разработке проектов."
+          }
         },
         {
           "skillName": "GitHub",
           "skillIcon": "/img/icons/github-icon.svg",
-          "skillDescription": "I use GitHub to host repositories and manage source code for personal and professional projects."
+          "skillDescription": {
+            "en": "I use GitHub to host repositories and manage source code for personal and professional projects.",
+            "ru": "Использую GitHub для хранения репозиториев и управления исходным кодом личных и профессиональных проектов."
+          }
         },
         {
           "skillName": "Figma",
           "skillIcon": "/img/icons/figma-icon.svg",
-          "skillDescription": "I work with Figma designs to translate layouts and interface specifications into responsive frontend implementations."
+          "skillDescription": {
+            "en": "I work with Figma designs to translate layouts and interface specifications into responsive frontend implementations.",
+            "ru": "Работаю с макетами в Figma и преобразую дизайн и спецификации интерфейсов в адаптивную frontend-реализацию."
+          }
         }
       ]
     },
     {
-      "skills_group_title": "Competencies:",
+      "skills_group_title": {
+        "en": "Competencies:",
+        "ru": "Компетенции:"
+      },
       "skills_items": [
         {
           "skillName": "REST API Integration",
           "skillIcon": "/img/icons/api-icon.svg",
-          "skillDescription": "I integrate frontend applications with REST APIs, handle asynchronous requests, and implement data-driven interfaces."
+          "skillDescription": {
+            "en": "I integrate frontend applications with REST APIs, handle asynchronous requests, and implement data-driven interfaces.",
+            "ru": "Интегрирую frontend-приложения с REST API, обрабатываю асинхронные запросы и создаю интерфейсы, работающие на основе данных."
+          }
         },
         {
           "skillName": "Server-Side Rendering (SSR)",
           "skillIcon": "/img/icons/ssr-icon.svg",
-          "skillDescription": "I work with SSR in Next.js projects to render pages on the server and support content-driven websites."
+          "skillDescription": {
+            "en": "I work with SSR in Next.js projects to render pages on the server and support content-driven websites.",
+            "ru": "Использую SSR в проектах на Next.js для серверного рендеринга страниц и реализации сайтов с динамическим контентом."
+          }
         },
         {
           "skillName": "Responsive Design",
           "skillIcon": "/img/icons/adaptive-icon.svg",
-          "skillDescription": "I build responsive interfaces that adapt to different screen sizes and devices."
+          "skillDescription": {
+            "en": "I build responsive interfaces that adapt to different screen sizes and devices.",
+            "ru": "Создаю адаптивные интерфейсы, которые корректно отображаются на экранах разных размеров и устройствах."
+          }
         },
         {
           "skillName": "Semantic HTML",
           "skillIcon": "/img/icons/semantic-icon.svg",
-          "skillDescription": "I use semantic elements to create meaningful document structure and improve accessibility and maintainability."
+          "skillDescription": {
+            "en": "I use semantic elements to create meaningful document structure and improve accessibility and maintainability.",
+            "ru": "Использую семантические HTML-элементы для создания понятной структуры документа, улучшения доступности и упрощения поддержки кода."
+          }
         },
         {
           "skillName": "Performance Optimization",
           "skillIcon": "/img/icons/optimization-icon.svg",
-          "skillDescription": "I consider page loading, rendering behavior, image delivery, and animation performance when developing frontend interfaces."
+          "skillDescription": {
+            "en": "I consider page loading, rendering behavior, image delivery, and animation performance when developing frontend interfaces.",
+            "ru": "При разработке интерфейсов учитываю скорость загрузки страниц, особенности рендеринга, загрузку изображений и производительность анимаций."
+          }
         }
       ]
     },
     {
-      "skills_group_title": "Languages:",
+      "skills_group_title": {
+        "en": "Languages:",
+        "ru": "Языки:"
+      },
       "skills_items": [
         {
-          "skillName": "Russian (Native)",
+          "skillName": {
+            "en": "Russian (Native)",
+            "ru": "Русский (родной)"
+          },
           "skillIcon": "/img/icons/ru.svg",
-          "skillDescription": "Russian is my native language."
+          "skillDescription": {
+            "en": "Russian is my native language.",
+            "ru": "Русский — мой родной язык."
+          }
         },
         {
-          "skillName": "English (B2)",
+          "skillName": {
+            "en": "English (B2)",
+            "ru": "Английский (B2)"
+          },
           "skillIcon": "/img/icons/en.svg",
-          "skillDescription": "I can read technical documentation and communicate about development topics in English."
+          "skillDescription": {
+            "en": "I can read technical documentation and communicate about development topics in English.",
+            "ru": "Могу читать техническую документацию и обсуждать темы, связанные с разработкой, на английском языке."
+          }
         },
         {
-          "skillName": "German (A2)",
+          "skillName": {
+            "en": "German (A2)",
+            "ru": "Немецкий (A2)"
+          },
           "skillIcon": "/img/icons/ger.svg",
-          "skillDescription": "I have a basic knowledge of German."
+          "skillDescription": {
+            "en": "I have a basic knowledge of German.",
+            "ru": "Владею немецким языком на базовом уровне."
+          }
         }
       ]
     }

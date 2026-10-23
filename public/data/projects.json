@@ -2,9 +2,18 @@
   {
     "href": "https://advline.ru/",
     "label": "advline",
-    "title": "Advline",
-    "desc": "A multi-page corporate website built with Next.js and TypeScript. Features API-driven content, dynamic routes for blog articles, job listings from hh.ru, contact forms, and GSAP animations. Live in production.",
-    "fullDesc": "A multi-page corporate website for a digital marketing agency, built with Next.js and TypeScript using server-side rendering.\nThe website includes service pages, case studies, articles, vacancies, and team sections. Dynamic content is fetched from backend APIs, including blog articles managed through an admin panel and job listings from hh.ru. Blog articles use dynamic routes, with structured JSON data rendered on dedicated pages. I also implemented contact forms and scroll-based animations using GSAP.\nThe website is deployed in production.",
+    "title": {
+      "en": "Advline",
+      "ru": "Advline"
+    },
+    "desc": {
+      "en": "A multi-page corporate website built with Next.js and TypeScript. Features API-driven content, dynamic routes for blog articles, job listings from hh.ru, contact forms, and GSAP animations. Live in production.",
+      "ru": "Многостраничный корпоративный сайт, разработанный на Next.js и TypeScript. Включает контент, получаемый через API, динамические маршруты для статей блога, вакансии с hh.ru, формы обратной связи и анимации на GSAP. Сайт работает в production."
+    },
+    "fullDesc": {
+      "en": "A multi-page corporate website for a digital marketing agency, built with Next.js and TypeScript using server-side rendering.\nThe website includes service pages, case studies, articles, vacancies, and team sections. Dynamic content is fetched from backend APIs, including blog articles managed through an admin panel and job listings from hh.ru. Blog articles use dynamic routes, with structured JSON data rendered on dedicated pages. I also implemented contact forms and scroll-based animations using GSAP.\nThe website is deployed in production.",
+      "ru": "Многостраничный корпоративный сайт для агентства интернет-маркетинга, разработанный на Next.js и TypeScript с использованием серверного рендеринга.\nНа сайте представлены страницы услуг, кейсы, статьи, вакансии и информация о команде. Динамический контент загружается через backend API, включая статьи блога, которыми можно управлять через административную панель, и вакансии с hh.ru. Для статей реализованы динамические маршруты, а структурированные данные в формате JSON отображаются на отдельных страницах. Также я реализовал формы обратной связи и анимации при прокрутке с помощью GSAP.\nСайт развёрнут и работает в production."
+    },
     "technologies": [
       "Next.js",
       "TypeScript",
@@ -18,9 +27,18 @@
   {
     "href": "https://paradocs.ru/",
     "label": "paradocs",
-    "title": "Paradocs",
-    "desc": "A multi-page corporate website for an AdTech platform, built with Next.js and TypeScript. Features API-driven content, server-side rendering, contact forms, theme switching, and animated UI elements. Live in production.",
-    "fullDesc": "A multi-page corporate website for Paradocs, a platform for programmatic digital advertising. Built with Next.js and TypeScript, the project uses server-side rendering and API integration to retrieve dynamic content managed through a backend admin panel.\nThe website includes product and service pages, advertising platform descriptions, contact forms, and content-driven sections. I implemented reusable interface components, responsive layouts, and scroll-based animations using GSAP. The project also includes light and dark theme switching implemented with CSS variables.\nThe website is running in production.",
+    "title": {
+      "en": "Paradocs",
+      "ru": "Paradocs"
+    },
+    "desc": {
+      "en": "A multi-page corporate website for an AdTech platform, built with Next.js and TypeScript. Features API-driven content, server-side rendering, contact forms, theme switching, and animated UI elements. Live in production.",
+      "ru": "Многостраничный корпоративный сайт для AdTech-платформы, разработанный на Next.js и TypeScript. Включает динамический контент из API, серверный рендеринг, формы обратной связи, переключение светлой и тёмной тем оформления и анимированные элементы интерфейса. Сайт работает в production."
+    },
+    "fullDesc": {
+      "en": "A multi-page corporate website for Paradocs, a platform for programmatic digital advertising. Built with Next.js and TypeScript, the project uses server-side rendering and API integration to retrieve dynamic content managed through a backend admin panel.\nThe website includes product and service pages, advertising platform descriptions, contact forms, and content-driven sections. I implemented reusable interface components, responsive layouts, and scroll-based animations using GSAP. The project also includes light and dark theme switching implemented with CSS variables.\nThe website is running in production.",
+      "ru": "Многостраничный корпоративный сайт для Paradocs — платформы автоматизированной закупки цифровой рекламы. Проект разработан на Next.js и TypeScript. Для получения динамического контента, управляемого через административную панель backend-системы, используются серверный рендеринг и интеграция с API.\nНа сайте представлены страницы продуктов и услуг, описание рекламной платформы, формы обратной связи и секции с динамическим контентом. Я разработал переиспользуемые компоненты интерфейса, адаптивные макеты и анимации при прокрутке с помощью GSAP. Также реализовал переключение светлой и тёмной тем оформления с использованием CSS-переменных.\nСайт работает в production."
+    },
     "technologies": [
       "Next.js",
       "TypeScript",
@@ -34,9 +52,18 @@
   {
     "href": "https://my.weba.net/",
     "label": "weba-account",
-    "title": "WEBA — Personal Account",
-    "desc": "A production single-page application built with React and TypeScript. Features API-driven customer data, authentication, protected account access, and feedback forms.",
-    "fullDesc": "A single-page application for customers of the WEBA internet service provider, built with React, TypeScript, and Vite.\nThe application provides authentication, protected account access, customer account information, and feedback forms. I implemented frontend components, managed shared application state with Redux Toolkit, and integrated the application with the backend API to retrieve and submit data.\nThe application is available to real customers in production.",
+    "title": {
+      "en": "WEBA — Personal Account",
+      "ru": "WEBA — Личный кабинет"
+    },
+    "desc": {
+      "en": "A production single-page application built with React and TypeScript. Features API-driven customer data, authentication, protected account access, and feedback forms.",
+      "ru": "Одностраничное приложение, разработанное на React и TypeScript и работающее в production. Включает получение данных клиентов через API, аутентификацию, защищённый доступ к личному кабинету и формы обратной связи."
+    },
+    "fullDesc": {
+      "en": "A single-page application for customers of the WEBA internet service provider, built with React, TypeScript, and Vite.\nThe application provides authentication, protected account access, customer account information, and feedback forms. I implemented frontend components, managed shared application state with Redux Toolkit, and integrated the application with the backend API to retrieve and submit data.\nThe application is available to real customers in production.",
+      "ru": "Одностраничное приложение для клиентов интернет-провайдера WEBA, разработанное на React, TypeScript и Vite.\nПриложение предоставляет возможность авторизации, защищённый доступ к личному кабинету, просмотр информации о клиентском аккаунте и отправку обращений через формы обратной связи. Я разработал frontend-компоненты, организовал управление общим состоянием приложения с помощью Redux Toolkit и интегрировал его с backend API для получения и отправки данных.\nПриложение доступно реальным клиентам и работает в production."
+    },
     "technologies": [
       "React",
       "TypeScript",
@@ -50,9 +77,18 @@
   {
     "href": "https://dev.weba.net/coverage-zone/",
     "label": "weba-coverage-zone",
-    "title": "WEBA — Coverage Zone",
-    "desc": "An interactive coverage-zone page for an internet service provider, built with Next.js and TypeScript. Features API-driven location data, dynamic routes for districts, streets, houses, and addresses, and connection availability checks. Available in a development environment.",
-    "fullDesc": "A coverage-zone page for WEBA, an internet service provider, designed to help visitors check network coverage and find out whether their home can be connected.\nThe project uses API-driven location data and dynamic routes for districts, streets, houses, and addresses, providing dedicated pages for different locations. The interface includes address search, connection availability checks, and forms for connection requests.\nThe page is currently available in the development environment and has not been released to production.",
+    "title": {
+      "en": "WEBA — Coverage Zone",
+      "ru": "WEBA — Зона покрытия"
+    },
+    "desc": {
+      "en": "An interactive coverage-zone page for an internet service provider, built with Next.js and TypeScript. Features API-driven location data, dynamic routes for districts, streets, houses, and addresses, and connection availability checks. Available in a development environment.",
+      "ru": "Интерактивная страница зоны покрытия интернет-провайдера, разработанная на Next.js и TypeScript. Включает получение данных о местоположении через API, динамические маршруты для районов, улиц, домов и адресов, а также проверку возможности подключения. Доступна в среде разработки."
+    },
+    "fullDesc": {
+      "en": "A coverage-zone page for WEBA, an internet service provider, designed to help visitors check network coverage and find out whether their home can be connected.\nThe project uses API-driven location data and dynamic routes for districts, streets, houses, and addresses, providing dedicated pages for different locations. The interface includes address search, connection availability checks, and forms for connection requests.\nThe page is currently available in the development environment and has not been released to production.",
+      "ru": "Страница зоны покрытия интернет-провайдера WEBA, предназначенная для проверки доступности сети и возможности подключения конкретного дома.\nВ проекте используются данные о местоположении, получаемые через API, и динамические маршруты для районов, улиц, домов и адресов. Для разных локаций предусмотрены отдельные страницы. Интерфейс включает поиск по адресу, проверку возможности подключения и формы для подачи заявок на подключение.\nВ настоящее время страница доступна в среде разработки и ещё не выпущена в production."
+    },
     "technologies": [
       "Next.js",
       "React",

@@ -8,7 +8,9 @@ import MainButton from '@/components/ui/main-button/main-button';
 import { AppRoute, basePath, Ext } from '@/constants/const';
 import { useMouseMove } from '@/hooks/use-mouse-move';
 import { gsap, useGSAP } from '@/lib/gsap';
-import { HeroSectionData } from '@/types/types';
+import { getCurrentLanguage } from '@/store/processes/language.slice';
+import { useAppSelector } from '@/store/store-hooks';
+import { MultiLangString } from '@/types/types';
 import { splitTextToParagraphs } from '@/utils/utils';
 import clsx from 'clsx';
 import Image from 'next/image';
@@ -18,8 +20,8 @@ import s from './hero-section.module.scss';
 // @======================== HeroSection ========================@ //
 
 interface HeroSectionProps {
-  heading: string;
-  text: string;
+  heading: MultiLangString;
+  text: MultiLangString;
 }
 
 export default function HeroSection(props: HeroSectionProps) {
@@ -86,6 +88,9 @@ export default function HeroSection(props: HeroSectionProps) {
   useMouseMove(refs.circles[0], 10);
   useMouseMove(refs.circles[1], 20);
 
+  const currentLanguage = useAppSelector(getCurrentLanguage);
+  const lang = currentLanguage.prefix;
+
   return (
     <section className={clsx(s.section)} ref={refs.section}>
       <Background className={s.bg}>
@@ -101,10 +106,10 @@ export default function HeroSection(props: HeroSectionProps) {
         <div className={s.inner}>
           <div className={s.info}>
             <Heading className={s.heading} ref={refs.heading} type='main'>
-              {heading}
+              {heading[lang]}
             </Heading>
             <div className={s.text_box} ref={refs.text}>
-              {splitTextToParagraphs(text).map((item, index) => (
+              {splitTextToParagraphs(text[lang]).map((item, index) => (
                 <p key={index} className={s.text}>
                   {item}
                 </p>
@@ -115,7 +120,7 @@ export default function HeroSection(props: HeroSectionProps) {
                 <MainButton
                   className={s.button}
                   href={AppRoute.PROJECTS}
-                  text='View Projects'
+                  text={lang === 'en' ? 'View Projects' : 'Смотреть проекты'}
                   iconPath={`${basePath}/img/icons/go-to-arrow.svg`}
                   color='gray'
                 />
@@ -123,9 +128,10 @@ export default function HeroSection(props: HeroSectionProps) {
               <div className={s.button_wrapper} ref={refs.button_cv}>
                 <MainButton
                   className={s.button}
-                  href=''
-                  text='Download CV'
+                  href={`${basePath}/files/aleksandr_shirokov_cv_${lang}.pdf`}
+                  text={lang === 'en' ? 'Download CV' : 'Скачать резюме'}
                   iconPath={`${basePath}/img/icons/download-arrow.svg`}
+                  download
                 />
               </div>
             </div>

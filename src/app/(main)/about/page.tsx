@@ -1,7 +1,7 @@
 import aboutData from '@/../public/data/about.json';
-import certificatesData from '@/../public/data/certificates.json';
+// import certificatesData from '@/../public/data/certificates.json';
 import skillsData from '@/../public/data/skills.json';
-import Certificates from '@/components/layout/certificates/certificates';
+// import Certificates from '@/components/layout/certificates/certificates';
 import Container from '@/components/layout/container/container';
 import Skills from '@/components/layout/skills/skills';
 import AboutHero from '@/components/sections/about-hero/about-hero';
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 export default function Page(): React.JSX.Element {
   const normalizedAboutData = convertKeysToCamelCase(aboutData);
   const normalizedSkillsData = convertKeysToCamelCase(skillsData);
-  const normalizedCertificatesData = convertKeysToCamelCase(certificatesData);
+  // const normalizedCertificatesData = convertKeysToCamelCase(certificatesData);
 
   return (
     <main>
@@ -29,11 +29,11 @@ export default function Page(): React.JSX.Element {
         </Container>
       </section>
 
-      <section>
+      {/* <section>
         <Container>
           <Certificates certificates={normalizedCertificatesData} />
         </Container>
-      </section>
+      </section> */}
     </main>
   );
 }

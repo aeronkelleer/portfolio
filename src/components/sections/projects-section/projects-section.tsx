@@ -6,13 +6,15 @@ import Heading from '@/components/ui/heading/heading';
 import MainButton from '@/components/ui/main-button/main-button';
 import { AppRoute, basePath } from '@/constants/const';
 import { useTransitionLink } from '@/hooks/use-transition-link';
-import { Project } from '@/types/types';
+import { getCurrentLanguage } from '@/store/processes/language.slice';
+import { useAppSelector } from '@/store/store-hooks';
+import { LocalizedProject } from '@/types/types';
 import s from './projects-section.module.scss';
 
 // @======================== ProjectsSection ========================@ //
 
 interface ProjectsSectionProps {
-  projects: Project[] | null;
+  projects: LocalizedProject[] | null;
 }
 
 export default function ProjectsSection(props: ProjectsSectionProps) {
@@ -23,11 +25,14 @@ export default function ProjectsSection(props: ProjectsSectionProps) {
   const projectsList = projects.slice(0, 4);
   const { handleTransition } = useTransitionLink();
 
+  const currentLanguage = useAppSelector(getCurrentLanguage);
+  const lang = currentLanguage.prefix;
+
   return (
     <section className={s.projects_section} id='projects'>
       <Container>
         <div className={s.inner}>
-          <Heading className={s.heading}>My projects</Heading>
+          <Heading className={s.heading}>{lang === 'en' ? 'My projects' : 'Мои проекты'}</Heading>
           <MainButton
             className={s.button}
             href={AppRoute.PROJECTS}
