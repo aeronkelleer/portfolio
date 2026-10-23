@@ -1,13 +1,13 @@
 import Container from '@/components/layout/container/container';
 import ProjectsList from '@/components/layout/projects-list/projects-list';
 import Heading from '@/components/ui/heading/heading';
-import { Project } from '@/types/types';
+import { LocalizedProject } from '@/types/types';
 import s from './projects-hero.module.scss';
 
 // @======================== ProjectsHero ========================@ //
 
 interface ProjectsHeroProps {
-  projects: Project[];
+  projects: LocalizedProject[];
 }
 
 export default function ProjectsHero(props: ProjectsHeroProps): React.JSX.Element {
