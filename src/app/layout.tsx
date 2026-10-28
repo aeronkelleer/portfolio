@@ -20,6 +20,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   const normalizedContactsData = convertKeysToCamelCase(contactsData);
   return (
     <html lang='en'>
+      <head>
+        <meta name='google-site-verification' content='CgYmnRgvM-jMlJ7wALByOl_VfHAFcbPJ1hWgz-PfjB0' />
+      </head>
       <body>
         <Providers>
           <Preloader />
