@@ -13,12 +13,12 @@ export const HEADER_SOCIALS_ITEMS: HeaderSocialItem[] = [
     icon: `${basePath}/img/icons/telegram-icon.svg`,
   },
   {
-    href: 'https://github.com/alexx-kis',
+    href: 'https://github.com/aeronkelleer',
     label: 'github',
     icon: `${basePath}/img/icons/github-icon.svg`,
   },
   {
-    href: 'mailto:alexander.s.kislov@gmail.com',
+    href: 'mailto:aeronkelleer@gmail.com',
     label: 'mail',
     icon: `${basePath}/img/icons/email-icon.svg`,
   },
