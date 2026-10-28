@@ -128,7 +128,7 @@ export default function HeroSection(props: HeroSectionProps) {
               <div className={s.button_wrapper} ref={refs.button_cv}>
                 <MainButton
                   className={s.button}
-                  href={`${basePath}/files/aleksandr_shirokov_cv_${lang}.pdf`}
+                  href={`${''}/files/aleksandr_shirokov_cv_${lang}.pdf`}
                   text={lang === 'en' ? 'Download CV' : 'Скачать резюме'}
                   iconPath={`${basePath}/img/icons/download-arrow.svg`}
                   download
