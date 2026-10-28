@@ -11,7 +11,8 @@ import HeroSection from '../components/sections/hero-section/hero-section';
 // #======================== HomePage ========================# //
 
 export const metadata: Metadata = {
-  title: 'Portfolio Alex Kis',
+  title: 'Portfolio Aeron Kelleer',
+  description: 'Frontend developer specializing in React, Next.js, and TypeScript.',
 };
 
 export default async function Page() {
