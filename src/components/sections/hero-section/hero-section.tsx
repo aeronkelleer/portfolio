@@ -100,7 +100,7 @@ export default function HeroSection(props: HeroSectionProps) {
         <div className={clsx(s.circle, s._bottom)} ref={refs.circles[1]}>
           <div className={s.circleInner} />
         </div>
-        <Image src={`${basePath}/img/bg/background.png`} alt='background' fill />
+        <Image src={`${basePath}/img/bg/background.png`} alt='background' fill loading='eager' />
       </Background>
       <Container>
         <div className={s.inner}>
@@ -125,7 +125,7 @@ export default function HeroSection(props: HeroSectionProps) {
                   color='gray'
                 />
               </div>
-              {/* <div className={s.button_wrapper} ref={refs.button_cv}>
+              <div className={s.button_wrapper} ref={refs.button_cv}>
                 <MainButton
                   className={s.button}
                   href={`${''}/files/aleksandr_shirokov_cv_${lang}.pdf`}
@@ -133,7 +133,7 @@ export default function HeroSection(props: HeroSectionProps) {
                   iconPath={`${basePath}/img/icons/download-arrow.svg`}
                   download
                 />
-              </div> */}
+              </div>
             </div>
           </div>
           <div className={s.image_box} ref={refs.image}>

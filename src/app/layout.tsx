@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const normalizedContactsData = convertKeysToCamelCase(contactsData);
   return (
-    <html lang='en'>
+    <html lang='en' data-scroll-behavior='smooth'>
       <head>
         <meta name='google-site-verification' content='CgYmnRgvM-jMlJ7wALByOl_VfHAFcbPJ1hWgz-PfjB0' />
       </head>
